@@ -1,25 +1,31 @@
 # COMPAG Annotator
 
-A local Ubuntu application for drawing, correcting and reviewing objects in full images, with your own classes. Manual annotation does not need a model, a cloud account or a GPU. Optional local AI assistance and segmentation training are separate installations.
+COMPAG Annotator is a local Ubuntu app for drawing, correcting, and reviewing objects in full images, using your own classes. Manual annotation works without a model, a cloud account, or a GPU. Local AI assistance and segmentation training are optional and installed separately.
 
-**Version: 1.0.0rc24 — release candidate.** Licensed under **AGPL-3.0-only** with the author approval recorded in [LICENSE_REVIEW.md](LICENSE_REVIEW.md). This is a prerelease tested on Ubuntu 22.04 WSL2; native Ubuntu desktop and genuine human acceptance remain outstanding. See [ACCEPTANCE_RESULTS.json](ACCEPTANCE_RESULTS.json) for current tests and clearly identified inherited real-model evidence. The prepared package is a prerelease; see [release notes](docs/RELEASE_NOTES_RC24.md).
+**Current version:** 1.0.0rc24 (release candidate)
+
+**License:** AGPL-3.0-only. The author's approval is recorded in `LICENSE_REVIEW.md`.
+
+This is a prerelease. It has been tested on Ubuntu 22.04 under WSL2, but not yet on a native Ubuntu desktop, and it hasn't gone through acceptance testing with real users. Current test results are in `ACCEPTANCE_RESULTS.json`, where results carried over from earlier real-model runs are marked as such. See the release notes for more.
 
 ## Install and open
 
-Download `compag-annotator-1.0.0rc24-ubuntu-x86_64.tar.gz` and `SHA256SUMS` from the GitHub Release assets. The automatically generated GitHub source archive does not contain the built installer wheel. Extract the Ubuntu bundle and, from its directory, run:
+Download `compag-annotator-1.0.0rc24-ubuntu-x86_64.tar.gz` and `SHA256SUMS` from the GitHub Release assets. Don't use the source archive that GitHub generates automatically, since it doesn't include the built installer wheel. Extract the bundle and run this from its folder:
 
-```sh
+```bash
 sha256sum -c SHA256SUMS
 sh scripts/install.sh --wheel dist/compag_annotator-1.0.0rc24-py3-none-any.whl --launch
 ```
 
-If Python 3.12 is missing, add `--download-python` to explicitly allow the pinned, verified user-space runtime download. See [Ubuntu installation](INSTALL_UBUNTU.md) for the source/digest, offline installation, updates and removal. Open **COMPAG Annotator** in the applications menu, or run `compag-annotator`. The application opens in your browser and keeps work on your computer.
+If Python 3.12 isn't installed, add `--download-python`. This lets the installer download a pinned, verified Python runtime into your user space. The Ubuntu installation guide covers the download source and digest, offline installs, updates, and uninstalling.
 
-## Installing from repository source
+To open the app, pick COMPAG Annotator from the applications menu or run `compag-annotator`. It opens in your browser, and your work stays on your computer.
 
-For developers with Python 3.12 (including venv) already installed:
+## Installing from source
 
-```sh
+For developers who already have Python 3.12 (with venv):
+
+```bash
 python3.12 -m venv .venv
 .venv/bin/python -m pip install '.[dev]'
 .venv/bin/python -m build --outdir dist
@@ -27,42 +33,39 @@ sh scripts/install.sh --python "$(pwd)/.venv/bin/python" \
   --wheel dist/compag_annotator-1.0.0rc24-py3-none-any.whl --launch
 ```
 
-The source checkout includes tests, GitHub Actions, license notices and offline help.
-Optional SAM/YOLO runtimes and model weights are installed separately in **Models & AI**.
-The app can detect compatible CPU/GPU devices after those runtimes are installed;
-the installer does not install GPU drivers. SAM3 requires user-supplied local weights.
+The source checkout includes tests, GitHub Actions workflows, license notices, and the offline help. Optional SAM/YOLO runtimes and model weights are installed separately from the Models & AI screen. Once they're installed, the app can detect compatible CPU/GPU devices. The installer doesn't install GPU drivers. SAM3 needs local weights that you provide yourself.
 
-## Start with your images
+## Getting started with your images
 
-1. In **Projects**, create a project. You can start with zero classes and add them after generating masks.
-2. In **Images**, import files or a folder. Copying images into the project is the simplest portable choice.
-3. In **Annotate**, draw/edit manually, or use SAM2 **Generate masks / Segment everything**. Choose whole-image processing or real source tiles: 256×256, 512×512, 1024×1024 or independent Custom width × height. New projects start at 512×512 with 25% overlap; preview the full grid before starting.
-4. In **Select**, click masks or select several from the object list. Create a class in the editor and assign it to the selection. Assignment keeps separate instances and does not accept them. Explicit **Merge selected masks** previews the exact union of existing pixels; use separate brush/SAM refinement to add missing pixels. Review, accept/reject, delete or undo as needed.
-5. Confirm image completeness only when you have checked the whole image and resolved relevant drafts/unassigned proposals. An empty image can be complete after deliberate review.
-6. Use **Export** for a native backup, COCO, YOLO or another supported format. Read the conversion report before accepting any approximation; disconnected merged masks and holes can block strict YOLO segmentation conversion.
+1. **Projects:** Create a project. You don't need any classes to start; you can add them after generating masks.
+2. **Images:** Import files or a whole folder. Copying the images into the project is the easiest way to keep it portable.
+3. **Annotate:** Draw and edit by hand, or use SAM2 **Generate masks** / **Segment everything**. You can process the whole image or split it into real source tiles: 256×256, 512×512, 1024×1024, or a custom width × height. New projects default to 512×512 tiles with 25% overlap. Preview the full tile grid before you start.
+4. **Select:** Click masks on the image or pick several from the object list. Create a class in the editor and assign it to the selection. Assigning a class keeps the instances separate and doesn't accept them. **Merge selected masks** shows a preview of the exact union of the existing pixels; to add missing pixels, refine separately with the brush or SAM. Review, accept, reject, delete, or undo as needed.
+5. **Confirm the image:** Only mark an image as complete once you've checked all of it and dealt with any relevant drafts or unassigned proposals. An empty image can be marked complete too, as long as you've actually reviewed it.
+6. **Export:** Save a native backup, or export to COCO, YOLO, or another supported format. Read the conversion report before accepting any approximation. Merged masks with disconnected parts or holes can block strict YOLO segmentation export.
 
-The **Next step** guide follows the current image: save SAM previews as drafts, label and review masks, explicitly confirm the whole image, then choose the next image, export, or optional training. The guide never accepts objects or changes dataset roles automatically. See [the workflow guide](docs/WORKFLOW_GUIDANCE.md).
+The **Next step** guide follows the image you're working on: save SAM previews as drafts, label and review masks, confirm the whole image, then move on to the next image, export, or train if you want to. It never accepts objects or changes dataset roles for you. See the workflow guide for more.
 
-**Generate masks** returns proposals for review, not guaranteed complete objects or semantic labels. It needs a ready SAM2 provider but no YOLO checkpoint or predefined classes. SAM3 automatic generation is unavailable until a compatible adapter is implemented and tested; its separate point/box assistance uses user-supplied local weights. Crop size is distinct from model encoder resizing and YOLO image size.
+**Generate masks** gives you proposals to review. They aren't guaranteed to be complete objects and don't come with labels. It needs a working SAM2 provider, but no YOLO checkpoint or predefined classes. Automatic mask generation with SAM3 isn't available yet, because a compatible adapter still has to be implemented and tested. SAM3 point/box assistance does work with your own local weights. Also note that crop size is a separate setting from the model's encoder resizing and from the YOLO image size.
 
-**Rounds** organizes eligible images; **Train** uses cumulative accepted segmentation data from explicitly completed images. Heavy boundary recovery is **OFF by default** and allowed only with explicit consent for a scoped job in **training preparation**, **automatic-mask annotation**, or the **Boundary check** option in YOLO prediction. Review proposed changes before applying them. Import, opening images, ordinary prediction, manual edits, prompting, merging, rounds and export never enable it automatically.
+**Rounds** organizes eligible images, and **Train** uses all accepted segmentation data from images you've marked as complete. Heavy boundary recovery is off by default. It only runs if you explicitly allow it for a specific job: training preparation, automatic-mask annotation, or the Boundary check option in YOLO prediction. Review the proposed changes before applying them. Importing, opening images, regular prediction, manual edits, prompting, merging, rounds, and export never turn it on by themselves.
 
-The prior Addendum 01 results remain documented in [the requirement map](ADDENDUM_01_IMPLEMENTATION.md). See [the rc2 update guide](docs/UPDATE_RC2_EN.md) for detected CPU/GPU selection, download/setup progress, dark theme and editable SAM settings.
+Results from Addendum 01 are still documented in the requirement map. The rc2 update guide covers CPU/GPU device selection, download and setup progress, the dark theme, and editable SAM settings.
 
 ## Help and status
 
-- [Quick start](docs/QUICKSTART.md) · [User guide](USER_GUIDE.md)
-- [Models](MODEL_SETUP.md) · [Training and rounds](TRAINING_AND_ROUNDS.md) · [Export formats](EXPORT_FORMATS.md)
-- [Troubleshooting](TROUBLESHOOTING.md) · [Known limitations](KNOWN_LIMITATIONS.md)
-- [Development and checks](DEVELOPMENT.md) · [Architecture](ARCHITECTURE.md)
-- [License review](LICENSE_REVIEW.md) · [Third-party notices](THIRD_PARTY_NOTICES.md) · [Publication checklist](PUBLICATION_CHECKLIST.md)
+- Quick start, User guide
+- Models, Training and rounds, Export formats
+- Troubleshooting, Known limitations
+- Development and checks, Architecture
+- License review, Third-party notices, Publication checklist
 
-The **Help** screen is bundled for offline use. This candidate covers 2-D still images and instance segmentation; video, medical-image formats, 3-D and shared remote servers are outside v1.
+The Help screen is bundled with the app, so it works offline. This release covers 2-D still images and instance segmentation. Video, medical image formats, 3-D, and shared remote servers aren't part of v1.
 
 ## Tile training and boundary checking
 
-For small objects, Train defaults to **512 × 512 tiles**. A new model stores this layout and Predict selected reuses it, then reconstructs masks in full-image coordinates. Optional **Boundary check** uses contextual SAM inference to propose seam repairs/merges for your confirmation. It is slower and OFF by default. See [Training and rounds](TRAINING_AND_ROUNDS.md) and [rc23 implementation/evidence](docs/TILED_PIPELINE_RC23.md).
+For small objects, Train uses 512 × 512 tiles by default. A new model remembers this tile layout, and **Predict selected** reuses it, then puts the masks back together in full-image coordinates. The optional **Boundary check** runs SAM with the surrounding context to suggest fixes or merges along tile seams, which you then confirm. It's slower and off by default. See Training and rounds, and the rc23 notes for implementation details and evidence.
 
-## Publishing this candidate
+## Publishing this release
 
-See [the GitHub upload guide](docs/GITHUB_RELEASE.md) for repository contents, release assets and prerelease tagging. Current package checks are in [the release verification summary](docs/RELEASE_VERIFICATION_RC24.json).
+The GitHub upload guide explains what goes in the repository, which release assets to attach, and how to tag a prerelease. Current package checks are in the release verification summary.
