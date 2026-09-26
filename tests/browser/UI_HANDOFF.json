@@ -1,0 +1,252 @@
+{
+  "schema_version": 2,
+  "task": "Addendum 01 incremental browser implementation",
+  "scope": [
+    "src/compag_annotator/web/assets/",
+    "tests/browser/"
+  ],
+  "changed_paths": [
+    "src/compag_annotator/web/assets/canvas.js",
+    "src/compag_annotator/web/assets/editor.js",
+    "src/compag_annotator/web/assets/generation.js",
+    "src/compag_annotator/web/assets/help.js",
+    "src/compag_annotator/web/assets/i18n.js",
+    "src/compag_annotator/web/assets/jobs.js",
+    "src/compag_annotator/web/assets/masks.js",
+    "src/compag_annotator/web/assets/models.js",
+    "src/compag_annotator/web/assets/projects.js",
+    "src/compag_annotator/web/assets/selection.js",
+    "src/compag_annotator/web/assets/style.css",
+    "src/compag_annotator/web/assets/tiling.js",
+    "src/compag_annotator/web/assets/workflows.js",
+    "tests/browser/README.md",
+    "tests/browser/UI_HANDOFF.json",
+    "tests/browser/conftest.py",
+    "tests/browser/provider_qa_server.py",
+    "tests/browser/test_addendum.py",
+    "tests/browser/test_app.py"
+  ],
+  "files": [
+    {
+      "path": "src/compag_annotator/web/assets/api.js",
+      "sha256": "ea9032fe7f234cee2b13849a6e0d399f93b2cc910dd41f8339abf595ef0f19a1"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/app.js",
+      "sha256": "af2b021ff1ba762103a4a9156b3bc659c2938117367ab36746118aed510ede54"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/canvas.js",
+      "sha256": "ee0dea7275788911b074d4c7746a8d2ea4f8f103526448eb500b0f916d618ce7"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/editor.js",
+      "sha256": "89a0c2b415e3bd3fb2012a33cef0c7e56482815440e6b0b323d15d3eafd2e310"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/generation.js",
+      "sha256": "299f4a0d3aaa52fe76c76f5d2e1b79fb09fb0c8558a6137c7660cd2eddcfdb13"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/geometry.js",
+      "sha256": "8a7b8f4513d28e24e8196d30fcd48bbf1d85b4c417290e5cc3cc9f03c8928197"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/help.js",
+      "sha256": "c1b7428a6d23392089119bec36af6768e6001bedb8e323d160f155895ef75d4b"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/i18n.js",
+      "sha256": "81c8b9bedc9b00cd3a75fb7e6dfc04d540aeb338d6f1232abc95a8f51e55d2a7"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/icon.svg",
+      "sha256": "3b9947bdbe9a97695c5e2cd54320bcd5c24d73ebdab8ab017efc05a4749cdbbd"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/imports.js",
+      "sha256": "d0129ff1980ed1374236adfa03ab40894ae1ea7bb8681925f0d0399b979ed5c7"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/index.html",
+      "sha256": "4f9b268200fdcf0993dce4ffa3d615103f07d0c9ad73e9d55778549f40578d97"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/jobs.js",
+      "sha256": "fa6addfeda3562014b7c56257a6b28d5c0c8b155d9090aa3cbf664f4fcbbb7cc"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/masks.js",
+      "sha256": "a4b1133caf747978430e2dbd145b41114bcc29414aafe45176eaef78fd890556"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/models.js",
+      "sha256": "45378002e8dd9efc4675694a5817147c75bc9f15a34927bc8d9fe08d23e78531"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/projects.js",
+      "sha256": "649b3fbe79389d3816e2908cefda03c84d1cbd3986a8aa773e7fbbe307cf4cee"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/selection.js",
+      "sha256": "284de15c7fa87203e82ac144bdc93cc597393a02f10538e7d9031b27d6c20492"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/style.css",
+      "sha256": "adcc777ff028419bfacdab7cea120aaf00ff7c01311831f7e38686f7ccc6ae26"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/tiling.js",
+      "sha256": "4ea03c209c0e173e74d7ec53b4ccac1bc7c99eb53245ef2ac7c66cddc787d6cd"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/ui.js",
+      "sha256": "a4c3bd589a045d74f8fb59c5354dd8fb759385a6c7e788f48262983f26fcbdf8"
+    },
+    {
+      "path": "src/compag_annotator/web/assets/workflows.js",
+      "sha256": "fd5d9022b25777bf8dc7006645f0351afb72ad1f045495e9d31918b81195f276"
+    },
+    {
+      "path": "tests/browser/README.md",
+      "sha256": "067c928e9bf13eed121885d1f3104b25be4e9d77526e708911013cd75493f81c"
+    },
+    {
+      "path": "tests/browser/conftest.py",
+      "sha256": "6f4e187506aa890b57a5b876b8cceec3597a63ac2333659745bb2d35bd25f542"
+    },
+    {
+      "path": "tests/browser/provider_qa_server.py",
+      "sha256": "e1f156509024fb9ae7668b00644f89f1bdba3db5f5c56810cde414a6ec205148"
+    },
+    {
+      "path": "tests/browser/test_addendum.py",
+      "sha256": "31471870be2a609a7b5984555d0fdbff667a24aea407c90feea82e1af78b3b18"
+    },
+    {
+      "path": "tests/browser/test_app.py",
+      "sha256": "833487065abd386252aefe0e68675ec1769bd8b66f1743792c383d36ff3ccdc2"
+    }
+  ],
+  "implemented": [
+    "all ten navigation areas",
+    "full-image box drawing/moving/resizing",
+    "polygon vertex drawing/moving/addition/deletion",
+    "exact mask add/subtract brushes with holes/components",
+    "object/class/proposal layers and opacity",
+    "project-global revision autosave and persistent history",
+    "explicit object and image review",
+    "SAM positive/negative/box prompts, alternatives and exact result binding rejection",
+    "multi-file and directory uploads plus folder drop and approved local path",
+    "filename-based manual round order and allocation preview",
+    "class mapping dropdowns for imports and model activation",
+    "training/readiness/settings with boundary off by default",
+    "staged boundary comparison with decisions gated on loaded geometry",
+    "model install consent, registration/trust, test, activation and rollback",
+    "real job progress/cancel/retry/resume and artifact downloads",
+    "offline English help, Persian quickstart and translation layer",
+    "class-agnostic Generate masks dialog and round/selected-image batch confirmation",
+    "one shared server tile planner for generation, YOLO prediction and project defaults",
+    "256/512/1024/custom rectangular dimensions with per-axis percent/pixel overlap and actual grid preview",
+    "separate Select, Paint class, SAM prompts and Edit geometry modes",
+    "compressed RLE exact hover/hit testing, viewport-driven geometry hydration and cached paths; full raster only for active brush",
+    "in-place class creation, multi-selection assignment and explicit assign-and-accept",
+    "proposal/unassigned/labeled draft/accepted/rejected/superseded counts and display filters",
+    "exact union preview and explicit class-conflict choice, lineage, persistent parent/child undo-redo",
+    "bulk reject/delete including previously rejected objects, persistent recovery",
+    "new/replace-unreviewed/resume generation layers with saved tile progress",
+    "annotation boundary scope opt-in and exact staged review; training context remains separate",
+    "unsupported automatic model capability disabled with provider explanation",
+    "English and Persian offline help reconciled with both explicit boundary contexts"
+  ],
+  "verification": {
+    "unique_browser_tests_passed": 15,
+    "full_browser_run": {
+      "passed": 14,
+      "failed": 0,
+      "seconds": 53.81
+    },
+    "final_stale_merge_layout_training_review_checks": {
+      "passed": 3,
+      "failed": 0,
+      "seconds": 15.06
+    },
+    "final_capability_disabled_and_exact_hit_check": {
+      "passed": 1,
+      "failed": 0,
+      "seconds": 4.82
+    },
+    "final_bulk_rejected_delete_persistent_undo_check": {
+      "passed": 1,
+      "failed": 0,
+      "seconds": 8.02
+    },
+    "javascript_syntax": "17 ES modules parsed after final asset changes",
+    "whitespace": "git diff --check passed within owned paths",
+    "viewport": [
+      "1366x768",
+      "1440x1000"
+    ],
+    "synthetic_images": [
+      "1536x2048",
+      "1537x2051",
+      "1200x900",
+      "800x600",
+      "500x380",
+      "520x410"
+    ],
+    "provider_mock": "Explicit synthetic provider boundary; production HTTP/jobs/planning/geometry/storage/history/review",
+    "real_provider_runs_by_ui_agent": 0,
+    "gpu_jobs_by_ui_agent": 0,
+    "checkpoint_downloads_by_ui_agent": 0,
+    "actual_coordinator_project_accessed_or_mutated": false,
+    "human_uat": "AWAITING_HUMAN_UAT",
+    "isolated_server_processes": "Test fixtures terminated their own servers",
+    "installed_python_flag": "COMPAG_TEST_INSTALLED_PYTHON retained in both server fixtures"
+  },
+  "screenshots": [
+    {
+      "run": "bulk-final2",
+      "test": "test_mock_provider_empty_class0",
+      "file": "mask-first-editor-laptop.png"
+    },
+    {
+      "run": "bulk-final2",
+      "test": "test_mock_provider_empty_class0",
+      "file": "exact-union-preview.png"
+    },
+    {
+      "run": "final",
+      "test": "test_mock_provider_tiling_defa0",
+      "file": "custom-tiling-generation.png"
+    },
+    {
+      "run": "final",
+      "test": "test_mock_provider_tiling_defa0",
+      "file": "resumed-layers.png"
+    },
+    {
+      "run": "final",
+      "test": "test_mock_provider_annotation_0",
+      "file": "annotation-recovery-comparison.png"
+    },
+    {
+      "run": "handoff",
+      "test": "test_stale_merge_preview_rejec0",
+      "file": "stale-merge-recovered.png"
+    },
+    {
+      "run": "final",
+      "test": "test_all_navigation_models_tra0",
+      "file": "train.png"
+    }
+  ],
+  "api_blockers": [],
+  "integration_needs": [
+    "Rebuild/reinstall the wheel after this final asset handoff before actual-proposal browser acceptance.",
+    "Coordinator owns real-image/provider and installed-wheel acceptance; no source UI agent access to the actual project."
+  ],
+  "runtime_assets": "Local ES modules/CSS/SVG only; no npm/CDN runtime dependency",
+  "publication": "No commits, pushes, remotes or publication performed",
+  "file_hash_scope": "This handoff point. Coordinator final packaged source manifest remains authoritative."
+}

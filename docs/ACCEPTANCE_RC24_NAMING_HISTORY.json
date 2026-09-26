@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0rc24",
+  "publication": "NOT_PUBLISHED",
+  "scope": "Dated names for YOLO best.pt records only",
+  "current_evidence": "docs/MODEL_NAMES_RC24.md",
+  "historical_acceptance": "docs/ACCEPTANCE_RC23_HISTORY.json",
+  "targeted_tests": {
+    "passed": 122,
+    "failed": 0,
+    "includes_source_browser": true
+  },
+  "python_lint": "PASS",
+  "javascript_syntax": "PASS",
+  "real_training_or_inference_this_update": false,
+  "human_uat": false,
+  "final_verification": "See outer evidence/FINAL_VERIFICATION.json for installed-package and preservation checks"
+}

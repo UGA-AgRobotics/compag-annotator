@@ -1,0 +1,21 @@
+include pyproject.toml MANIFEST.in
+include *.md LICENSE *.json
+include CITATION.cff
+recursive-include src/compag_annotator *.py *.html *.css *.js *.svg
+recursive-include src/compag_annotator/help *.md
+recursive-include src/compag_annotator/models/requirements *.txt
+recursive-include tests *.py *.js *.json *.md
+recursive-include scripts *.py *.sh
+recursive-include docs *.md *.json
+recursive-include locks *.txt *.json *.toml *.lock *.in
+recursive-include .github *.yml *.yaml *.md
+exclude docs/INTEGRATION_CONTRACT.md
+exclude README_FA.md FINAL_REPORT_FA.md
+prune private
+prune preserved_source
+prune public_release
+prune .venv
+prune .git
+prune dist
+prune build
+global-exclude __pycache__ *.py[cod] *.pt *.pth *.ckpt *.safetensors *.onnx *.sqlite* *.db *.npy *.npz *.pkl *.pickle .DS_Store

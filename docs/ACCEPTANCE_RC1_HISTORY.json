@@ -1,0 +1,749 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0rc1",
+  "scope": "Implemented Ubuntu application; actual automated evidence and explicit remaining human/native-OS/rights gates",
+  "requirements": [
+    {
+      "id": "V1-01",
+      "requirement": "Input/source preservation",
+      "status": "PASS",
+      "implemented_paths": [
+        "storage/files.py"
+      ],
+      "command": "Source ZIP SHA-256 and all 493 preserved manifest records",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "No original research writes"
+    },
+    {
+      "id": "V1-02",
+      "requirement": "Independent core install",
+      "status": "PASS_WSL",
+      "implemented_paths": [
+        "cli.py",
+        "scripts/install_ubuntu.py"
+      ],
+      "command": "63 packaging checks and actual independently downloaded Python bootstrap/install",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Native Ubuntu desktop installations not executed"
+    },
+    {
+      "id": "V1-03",
+      "requirement": "Ubuntu launcher and CLI",
+      "status": "PASS_WSL",
+      "implemented_paths": [
+        "cli.py",
+        "scripts/install_ubuntu.py"
+      ],
+      "command": "CLI/desktop-file validation and installed loopback service",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Native application-menu click not executed"
+    },
+    {
+      "id": "V1-04",
+      "requirement": "Arbitrary classes",
+      "status": "PASS_AUTOMATED",
+      "implemented_paths": [
+        "core/projects.py",
+        "web/assets/projects.js"
+      ],
+      "command": "Core stable classes/schema tests; browser class wizard and mapping",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Human usability acceptance pending"
+    },
+    {
+      "id": "V1-05",
+      "requirement": "Full-image and folder import",
+      "status": "PASS_AUTOMATED",
+      "implemented_paths": [
+        "storage/media.py",
+        "web/assets/imports.js"
+      ],
+      "command": "Six original 3024x4032 imports plus browser files/folder/drop tests",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "8-bit single-frame still-image subset; no multi-page/high-depth TIFF"
+    },
+    {
+      "id": "V1-06",
+      "requirement": "Manual annotation without models",
+      "status": "PASS_AUTOMATED",
+      "implemented_paths": [
+        "core/projects.py",
+        "web/assets/canvas.js"
+      ],
+      "command": "Browser box/polygon editing, brush masks, holes, history, laptop viewport",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Human usability acceptance pending"
+    },
+    {
+      "id": "V1-07",
+      "requirement": "Review provenance",
+      "status": "PASS_AUTOMATED",
+      "implemented_paths": [
+        "core/projects.py"
+      ],
+      "command": "Automated actor stays nonhuman; explicit image completeness; source refinement regression",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "No real human review was supplied"
+    },
+    {
+      "id": "V1-08",
+      "requirement": "SAM2 managed installation",
+      "status": "PASS_SMALL",
+      "implemented_paths": [
+        "models/runtime.py",
+        "models/catalog.py"
+      ],
+      "command": "Real isolated SAM2Small source/runtime/checkpoint setup",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Tiny/Base Plus/Large catalog entries remain individually unvalidated"
+    },
+    {
+      "id": "V1-09",
+      "requirement": "SAM2 genuine prompting",
+      "status": "PASS_REAL_PROVIDER",
+      "implemented_paths": [
+        "providers/sam2.py"
+      ],
+      "command": "Real full-image GPU positive/negative points, box and CPU point inference",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "No scientific accuracy claim"
+    },
+    {
+      "id": "V1-10",
+      "requirement": "SAM3 local-weight flow",
+      "status": "PASS_REAL_LOCAL_CHECKPOINT",
+      "implemented_paths": [
+        "models/manager.py",
+        "providers/sam3.py"
+      ],
+      "command": "Real strict loading and full-image GPU point/negative/box inference; local file SHA verified; no checkpoint download",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Only pinned SAM3 image/interactivity model, bfloat16 CUDA4090 tested; CPU/video/SAM3.1 not supported"
+    },
+    {
+      "id": "V1-11",
+      "requirement": "SAM3 genuine prompting",
+      "status": "PASS_REAL_LOCAL_CHECKPOINT",
+      "implemented_paths": [
+        "providers/sam3.py"
+      ],
+      "command": "Real strict loading and full-image GPU point/negative/box inference; local file SHA verified; no checkpoint download",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Only pinned SAM3 image/interactivity model, bfloat16 CUDA4090 tested; CPU/video/SAM3.1 not supported"
+    },
+    {
+      "id": "V1-12",
+      "requirement": "YOLO model manager",
+      "status": "PASS_REAL_PROVIDER",
+      "implemented_paths": [
+        "models/manager.py",
+        "providers/yolo.py"
+      ],
+      "command": "Official YOLO26n verified digest; actual checkpoint inference/registration/activation",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Other catalog variants unvalidated; local YOLO checkpoints must be trusted"
+    },
+    {
+      "id": "V1-13",
+      "requirement": "Training data readiness",
+      "status": "PASS_AUTOMATED",
+      "implemented_paths": [
+        "training/snapshots.py"
+      ],
+      "command": "Reviewed/complete data gate; fixed validation/group leakage; box and topology rejection",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Automated QA fixtures only; human readiness requires human review"
+    },
+    {
+      "id": "V1-14",
+      "requirement": "Actual first training",
+      "status": "PASS_REAL_PROVIDER_QA",
+      "implemented_paths": [
+        "training/snapshots.py",
+        "providers/yolo.py"
+      ],
+      "command": "First real3epoch training: 2 train/2val, new checkpoint and fresh-process probe",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Human full-round UAT pending; metrics zero on arbitrary QA fixtures"
+    },
+    {
+      "id": "V1-15",
+      "requirement": "New-model reuse",
+      "status": "PASS_REAL_PROVIDER_QA",
+      "implemented_paths": [
+        "web/service.py",
+        "models/manager.py"
+      ],
+      "command": "Exact newly trained checkpoint loaded in fresh workers on both next-round full images",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Zero proposals passed default threshold; useful accuracy not established"
+    },
+    {
+      "id": "V1-16",
+      "requirement": "Cumulative retraining",
+      "status": "PASS_REAL_PROVIDER_QA",
+      "implemented_paths": [
+        "training/snapshots.py",
+        "providers/yolo.py"
+      ],
+      "command": "Second real3epoch training: 4 cumulative train/2fixedval; distinct saved checkpoint loaded",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "No further training within exhausted two-job acceptance allocation"
+    },
+    {
+      "id": "V1-17",
+      "requirement": "Arbitrary round scheduling",
+      "status": "PASS_AUTOMATED",
+      "implemented_paths": [
+        "core/rounds.py",
+        "web/assets/workflows.js"
+      ],
+      "command": "Quotient/remainder/manual/seeded arbitrary round planning and browser controls",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "No old scientific AL runs resumed"
+    },
+    {
+      "id": "V1-18",
+      "requirement": "Default boundary OFF",
+      "status": "PASS",
+      "implemented_paths": [
+        "boundary/preparation.py",
+        "web/service.py"
+      ],
+      "command": "Real default workflows recorded zero heavy boundary invocations",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Default off also enforced in UI and unit tests"
+    },
+    {
+      "id": "V1-19",
+      "requirement": "Explicit scoped recovery in training preparation or automatic-mask annotation",
+      "status": "PASS_GUARDS_UNMEASURED_ACCURACY",
+      "implemented_paths": [
+        "boundary/preparation.py"
+      ],
+      "command": "20 focused boundary regressions plus real one-instance annotation-time SAM attempt, review gate and unchanged retained original",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json",
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "No suitable replacement in real selected subset; accuracy/human review remains unmeasured. Addendum supersedes training-only restriction."
+    },
+    {
+      "id": "V1-20",
+      "requirement": "Native and COCO exactness",
+      "status": "PASS_AUTOMATED",
+      "implemented_paths": [
+        "core/catalog.py",
+        "formats/coco.py"
+      ],
+      "command": "Actual native/COCO reimport: all18 full-image masks and class/image binding exact; native IDs/history preserved",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Human export inspection pending"
+    },
+    {
+      "id": "V1-21",
+      "requirement": "YOLO segmentation exchange",
+      "status": "PASS_AUTOMATED",
+      "implemented_paths": [
+        "formats/yolo.py",
+        "training/snapshots.py"
+      ],
+      "command": "Actual18-object YOLO export/reimport exact plus independent real Ultralytics loader test",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Unsupported topology requires explicit measured loss approval or strict blocking"
+    },
+    {
+      "id": "V1-22",
+      "requirement": "Other declared formats",
+      "status": "PASS_AUTOMATED",
+      "implemented_paths": [
+        "formats/"
+      ],
+      "command": "Geometry/formats tests cover VOC, LabelMe, YOLO boxes and PNG variants",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Detection/VOC are box-only; semantic/instance conflicts require explicit choice"
+    },
+    {
+      "id": "V1-23",
+      "requirement": "No silent lossy conversion",
+      "status": "PASS_AUTOMATED",
+      "implemented_paths": [
+        "geometry/",
+        "formats/"
+      ],
+      "command": "Holes/components/overlap/same-bbox collisions/roundtrip and loss-report checks",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "No universal lossless polygon conversion promise"
+    },
+    {
+      "id": "V1-24",
+      "requirement": "Durability and cancellation",
+      "status": "PASS_AUTOMATED_PARTIAL_REAL",
+      "implemented_paths": [
+        "jobs/runner.py",
+        "core/projects.py",
+        "providers/process.py"
+      ],
+      "command": "Persistence, cancellation/restart/history/provider isolation tests; installer interruption/offline tests",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Real interrupted GPU training resume not run: two-job cap exhausted"
+    },
+    {
+      "id": "V1-25",
+      "requirement": "Local security",
+      "status": "PASS_AUTOMATED",
+      "implemented_paths": [
+        "web/security.py",
+        "storage/files.py"
+      ],
+      "command": "Loopback/Origin/token/body and archive/path protections, browser HTML escaping",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Trusted checkpoint loaders are not a security sandbox"
+    },
+    {
+      "id": "V1-26",
+      "requirement": "Offline and optional dependencies",
+      "status": "PASS_AUTOMATED",
+      "implemented_paths": [
+        "cli.py",
+        "models/runtime.py",
+        "web/assets/"
+      ],
+      "command": "Core no ML imports; independent runtimes; offline help/manual tools; cached bootstrap retry",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "First optional runtime/weight setup needs network unless assets already local"
+    },
+    {
+      "id": "V1-27",
+      "requirement": "License and authorship review",
+      "status": "PENDING_OWNER_REVIEW",
+      "implemented_paths": [
+        "LICENSE",
+        "LICENSE_REVIEW.md",
+        "THIRD_PARTY_NOTICES.md"
+      ],
+      "command": "Source and upstream terms identified with no fabricated ownership/DOI",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Public licensing/authorship clearance remains unresolved"
+    },
+    {
+      "id": "V1-28",
+      "requirement": "Public/private separation",
+      "status": "PASS_SCANNER_AND_PRE_RELEASE",
+      "implemented_paths": [
+        "scripts/stage_public.py"
+      ],
+      "command": "Source/history allowlist scans, scanner tests and actual pre-release artifact scans passed",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Final frozen artifact identity and content receipt supplied separately as dist/FINAL_VERIFICATION.json; public ownership/content review remains"
+    },
+    {
+      "id": "V1-29",
+      "requirement": "Docs and actual artifacts",
+      "status": "PASS_EXECUTED_PRE_RELEASE",
+      "implemented_paths": [
+        "pyproject.toml",
+        "scripts/",
+        "documentation"
+      ],
+      "command": "Built wheel/sdist; independent Python3.12.14 install; nine installed-wheel browser tests; five actual registered checkpoints loaded with Python3.12.14",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Final distribution hashes and content verification supplied separately in dist/FINAL_VERIFICATION.json; native desktop/human gates remain"
+    },
+    {
+      "id": "V1-30",
+      "requirement": "Truthful final gate",
+      "status": "PASS_REPORTING_RELEASE_NOT_READY",
+      "implemented_paths": [
+        "FINAL_REPORT_FA.md",
+        "docs/HUMAN_UAT.md"
+      ],
+      "command": "Version remains1.0.0rc1; automated/model/human/native/rights evidence separated",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64; RTX4090 for recorded real-provider probes only",
+      "evidence": [
+        "docs/MEASURED_RESULTS.json",
+        "docs/PYTHON_BOOTSTRAP_RESULTS.json",
+        "docs/PACKAGING_TEST_RESULTS.json"
+      ],
+      "remaining_limitation": "Necessary genuine human and native desktop gates remain open"
+    },
+    {
+      "id": "A01-00",
+      "requirement": "Preserve existing jobs, masks and input source",
+      "status": "PASS",
+      "implemented_paths": [
+        "core/projects.py"
+      ],
+      "command": "Existing base checkpoint and source preservation; immutable plans and source snapshot tests",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "No human/scientific-accuracy/native-desktop claim; see precise evidence status"
+    },
+    {
+      "id": "A01-01",
+      "requirement": "Zero-class generation and arbitrary classes afterward",
+      "status": "PASS_REAL_INSTALLED_UI_QA",
+      "implemented_paths": [
+        "core/selection.py"
+      ],
+      "command": "Actual841proposal project, create3classes after generation, single/bulk assignment and explicit QA acceptance",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "No human/scientific-accuracy/native-desktop claim; see precise evidence status"
+    },
+    {
+      "id": "A01-02",
+      "requirement": "256/512/1024 and arbitrary rectangular tiling",
+      "status": "PASS_AUTOMATED_AND_TWO_REAL_PRESETS",
+      "implemented_paths": [
+        "geometry/tiling.py"
+      ],
+      "command": "99 new geometry/merge tests; real512and640x384 complete original; independent513x385 browser grid",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "256/1024 and513x385 checked in software; actual full-image AMG ran512 and640x384 only."
+    },
+    {
+      "id": "A01-03",
+      "requirement": "Crop/encoder/full-image coordinate and coverage provenance",
+      "status": "PASS_REAL_PROVIDER",
+      "implemented_paths": [
+        "core/generation.py"
+      ],
+      "command": "All260real tile receipts and1261canonical proposals mapped/verified exactly before QA edits",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "No human/scientific-accuracy/native-desktop claim; see precise evidence status"
+    },
+    {
+      "id": "A01-04",
+      "requirement": "Real SAM2 automatic proposals without YOLO or classes",
+      "status": "PASS_REAL_PROVIDER",
+      "implemented_paths": [
+        "providers/sam2.py"
+      ],
+      "command": "Three complete natural-image jobs (sameoriginal), source/checkpoint/encoder settings frozen",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "No human/scientific-accuracy/native-desktop claim; see precise evidence status"
+    },
+    {
+      "id": "A01-05",
+      "requirement": "SAM3 automatic capability and local-only checkpoint policy",
+      "status": "UNSUPPORTED_AUTOMATIC_PROMPTING_PASSED",
+      "implemented_paths": [
+        "models/catalog.py"
+      ],
+      "command": "Unsupported automatic capability explained; genuine local SAM3 point/box evidence reused",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "SAM3 automatic unavailable in validated adapter. Existing local-checkpoint point/box prompting actually passed."
+    },
+    {
+      "id": "A01-06",
+      "requirement": "Durable generation, resume, idempotence and protected decisions",
+      "status": "PASS_AUTOMATED",
+      "implemented_paths": [
+        "core/generation.py"
+      ],
+      "command": "Persistent tombstones/overlap duplicate deletion regression; native clone cannot resume original jobs",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "No human/scientific-accuracy/native-desktop claim; see precise evidence status"
+    },
+    {
+      "id": "A01-07",
+      "requirement": "Exact canvas hit testing, multi-selection and labeling",
+      "status": "PASS_REAL_INSTALLED_UI_QA",
+      "implemented_paths": [
+        "web/assets/masks.js"
+      ],
+      "command": "Actual841mask UI selection passed after priority-load fix; focused regression and installed browser suite",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "No human/scientific-accuracy/native-desktop claim; see precise evidence status"
+    },
+    {
+      "id": "A01-08",
+      "requirement": "Exact manual union with conflicts, lineage and undo",
+      "status": "PASS_REAL_INSTALLED_UI_QA",
+      "implemented_paths": [
+        "core/selection.py"
+      ],
+      "command": "Actual cross-tile union checked pixel-for-pixel; synthetic holes/components/adjacency and atomic stale checks",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "No human/scientific-accuracy/native-desktop claim; see precise evidence status"
+    },
+    {
+      "id": "A01-09",
+      "requirement": "Mask correction, deletion and persistent undo",
+      "status": "PASS_REAL_INSTALLED_UI_QA",
+      "implemented_paths": [
+        "web/assets/canvas.js"
+      ],
+      "command": "Actual merged-mask brush correction; delete then undo after reload preserved exact current pixels",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "No human/scientific-accuracy/native-desktop claim; see precise evidence status"
+    },
+    {
+      "id": "A01-10",
+      "requirement": "Boundary OFF by default and scoped real ON attempt",
+      "status": "PASS_GUARDS_UNMEASURED_ACCURACY",
+      "implemented_paths": [
+        "boundary/preparation.py"
+      ],
+      "command": "Every default real generation had zero heavy calls; selectedscope1realcall, staged unresolved and retained",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "No human/scientific-accuracy/native-desktop claim; see precise evidence status"
+    },
+    {
+      "id": "A01-11",
+      "requirement": "Stale decisions, neighbor protection and safe history",
+      "status": "PASS_AUTOMATED",
+      "implemented_paths": [
+        "boundary/preparation.py"
+      ],
+      "command": "20 boundary regressions: primary+alternatives, stale dismissal, acceptance/retain/exclusion undo and failure attempts",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "No human/scientific-accuracy/native-desktop claim; see precise evidence status"
+    },
+    {
+      "id": "A01-12",
+      "requirement": "Accepted generated state in exports and cumulative snapshots",
+      "status": "PASS_ACTUAL_EXPORT_AND_CPU_DATASET_UNTRAINED",
+      "implemented_paths": [
+        "training/snapshots.py"
+      ],
+      "command": "Actual COCO/native exact pixels; isolated cumulative snapshot4train+2fixedval; actual UltralyticsCPU loader; current merged+brush-corrected child appears once",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "Generated image retains fixed validation role; no new training. Strict YOLO refuses unsupported topology; explicit QA-only lossy conversion measured separately."
+    },
+    {
+      "id": "A01-13",
+      "requirement": "Lazy responsive masks and controlled execution",
+      "status": "PASS_AUTOMATED_AND_REAL_UI_QA",
+      "implemented_paths": [
+        "web/assets/masks.js"
+      ],
+      "command": "Interactive geometry priority resolved observed real841mask selection wait; provider serialized and no hidden fallback",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "No human/scientific-accuracy/native-desktop claim; see precise evidence status"
+    },
+    {
+      "id": "A01-14",
+      "requirement": "Updated wheel/sdist/help/clean public package",
+      "status": "SEE_FINAL_ARTIFACT_RECEIPT",
+      "implemented_paths": [
+        "scripts/stage_public.py"
+      ],
+      "command": "Updated installer, wheel/sdist/help; exact source/artifact/history scan and installed package identity in supplied dist/FINAL_VERIFICATION.json",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "Native Ubuntu menu click and owner rights approval pending; no publication."
+    },
+    {
+      "id": "A01-15",
+      "requirement": "Genuine human and native Ubuntu acceptance",
+      "status": "AWAITING_HUMAN_UAT",
+      "implemented_paths": [
+        "docs/HUMAN_UAT.md"
+      ],
+      "command": "Automated QA is distinct; native22/24 desktop and human review have not been supplied",
+      "environment": "Ubuntu22.04.5 WSL2 x86_64, RTX4090 for explicitly recorded GPU calls",
+      "evidence": [
+        "docs/ADDENDUM_MEASURED_RESULTS.json"
+      ],
+      "remaining_limitation": "No human/scientific-accuracy/native-desktop claim; see precise evidence status"
+    }
+  ],
+  "release_status": "AWAITING_HUMAN_UAT",
+  "publication": "NOT_PUBLISHED_PENDING_OWNER_REVIEW",
+  "automated_tests": {
+    "unit_integration_passed": 516,
+    "unit_failed": 0,
+    "unit_skipped": 0,
+    "browser_installed_passed": 20,
+    "browser_failed": 0,
+    "installed_final_identity": "dist/FINAL_VERIFICATION.json"
+  },
+  "final_build_identity_receipt": "dist/FINAL_VERIFICATION.json, supplied alongside the distributions after final artifact scan"
+}

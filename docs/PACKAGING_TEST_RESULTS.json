@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0rc1",
+  "date": "2026-09-24",
+  "environment": {
+    "python": "3.12.7",
+    "system": "Linux",
+    "kind": "development environment; native Ubuntu desktop acceptance not performed"
+  },
+  "unit_integration": {
+    "status": "PASS",
+    "command": ".venv/bin/python -m pytest -q tests/test_packaging.py",
+    "tests_passed": 44,
+    "tests_failed": 0,
+    "log_sha256": "bda0057a29ee983f8bd3c6b4880ca938f9adf973990b270c98dedc9ddad5ca41",
+    "scope": [
+      "CLI help/version/doctor without ML imports",
+      "actual loopback QA session",
+      "real native backup and restore, overwrite refusal",
+      "desktop/shell quoting",
+      "runtime archive digest/traversal/link protections",
+      "install locking and first-install retry",
+      "rollback and uninstall guards",
+      "source/wheel/sdist content, identity and allowlist tests"
+    ]
+  },
+  "lint": {
+    "status": "PASS",
+    "command": "ruff check scripts/install_ubuntu.py scripts/uninstall_ubuntu.py scripts/stage_public.py src/compag_annotator/cli.py tests/test_packaging.py",
+    "version": "0.16.9"
+  },
+  "build": {
+    "status": "PASS",
+    "command": ".venv/bin/python -m build",
+    "artifacts": [
+      {
+        "filename": "compag_annotator-1.0.0rc1-py3-none-any.whl",
+        "bytes": 305598,
+        "sha256": "954a3862ad1c60919cc65d350ffbd0a0f756b239569d7e94eb85ad20c0002b3b",
+        "scope": "private integration test build; not final release"
+      },
+      {
+        "filename": "compag_annotator-1.0.0rc1.tar.gz",
+        "bytes": 465350,
+        "sha256": "08f59a0bc99a42326faf3727145db822b111dc0d0a92556c35c575a8280e8163",
+        "scope": "private integration test build; not final release"
+      }
+    ]
+  },
+  "installed_wheel": {
+    "status": "PASS",
+    "outside_source": true,
+    "paths_with_spaces": true,
+    "python": "3.12.7",
+    "checks": [
+      "fresh isolated installation of built wheel",
+      "installed version/help/metadata-only doctor",
+      "packaged UI/help/icon/provider requirements present",
+      "core import without Torch",
+      "actual installed CLI native backup and restore",
+      "idempotent reinstall",
+      "upgrade between distinct wheel hashes",
+      "rollback and switch forward",
+      "desktop-file-validate",
+      "uninstall preserved project and backup hashes"
+    ]
+  },
+  "source_scan": {
+    "status": "PASS",
+    "includes_reachable_git_history": true,
+    "note": "Exact file count can change during parallel implementation; re-run at final source freeze."
+  },
+  "artifact_content_scan": {
+    "status": "PASS",
+    "inspected": [
+      "actual wheel",
+      "actual sdist"
+    ],
+    "source_identity_comparison": "DETECTED_STALE_BUILD_AFTER_CONCURRENT_SOURCE_EDIT",
+    "final_release_gate": "NOT_RUN_REBUILD_AFTER_COORDINATOR_FREEZE"
+  },
+  "not_run": [
+    "native Ubuntu 22.04 clean desktop install",
+    "native Ubuntu 24.04 clean desktop install",
+    "actual standalone Python runtime bootstrap",
+    "native desktop menu click",
+    "browser UAT by this packaging owner",
+    "real SAM2/SAM3/YOLO provider execution",
+    "GPU training",
+    "genuine human acceptance",
+    "final public release assembly and frozen-source/artifact scan"
+  ],
+  "publication": "PENDING_OWNER_APPROVAL",
+  "human_uat": "AWAITING_HUMAN_UAT",
+  "model_downloads_performed": false,
+  "gpu_jobs_performed": false,
+  "note": "Only packaging scope is reported here. Final FEATURE_STATUS.json and ACCEPTANCE_RESULTS.json remain coordinator-owned evidence decisions. Private logs/builds are retained outside source."
+}

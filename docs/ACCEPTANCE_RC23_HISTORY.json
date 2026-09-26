@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0rc23",
+  "publication": "NOT_PUBLISHED",
+  "historical_acceptance": "docs/ACCEPTANCE_RC11_HISTORY.json",
+  "scope": "Incremental 512px training/prediction and contextual boundary update",
+  "current_evidence": "docs/TILED_PIPELINE_RC23.md",
+  "final_verification": "See outer release FINAL_VERIFICATION.json for artifact-bound test results",
+  "real_provider_test": {
+    "device": "NVIDIA RTX 4090 / CUDA",
+    "training_jobs": 1,
+    "epochs": 1,
+    "source_images": 2,
+    "synthetic_labels": true,
+    "human_uat": false,
+    "accuracy_claim": false,
+    "fresh_checkpoint_inference": true,
+    "sam2_boundary_attempts": 1,
+    "sam3": "NOT_TESTED_NO_LOCAL_WEIGHT"
+  },
+  "unmeasured": [
+    "Natural-image detection/segmentation improvement",
+    "Human acceptance of new merge flow",
+    "Native desktop on other hardware"
+  ]
+}

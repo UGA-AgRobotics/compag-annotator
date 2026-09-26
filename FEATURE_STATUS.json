@@ -1,0 +1,200 @@
+{
+  "schema_version": 2,
+  "version": "1.0.0rc24",
+  "license": "AGPL-3.0-only",
+  "publication": "NOT_PUBLISHED",
+  "features": [
+    {
+      "id": "packaging_cli_installer",
+      "implementation": "IMPLEMENTED",
+      "historical_evidence": {
+        "unit_test": "PASS_AUTOMATED",
+        "browser_test": "NOT_APPLICABLE",
+        "real_provider_test": "NOT_APPLICABLE",
+        "human_uat": "AWAITING_HUMAN_UAT"
+      },
+      "current_software_suite": "ACCEPTANCE_RESULTS.json",
+      "human_uat": "AWAITING_HUMAN_UAT"
+    },
+    {
+      "id": "offline_help",
+      "implementation": "IMPLEMENTED",
+      "historical_evidence": {
+        "unit_test": "PASS_AUTOMATED",
+        "browser_test": "PASS_AUTOMATED",
+        "real_provider_test": "NOT_APPLICABLE",
+        "human_uat": "AWAITING_HUMAN_UAT"
+      },
+      "current_software_suite": "ACCEPTANCE_RESULTS.json",
+      "human_uat": "AWAITING_HUMAN_UAT"
+    },
+    {
+      "id": "public_staging_scanner",
+      "implementation": "IMPLEMENTED",
+      "historical_evidence": {
+        "unit_test": "PASS_AUTOMATED",
+        "browser_test": "NOT_APPLICABLE",
+        "real_provider_test": "NOT_APPLICABLE",
+        "human_uat": "AWAITING_HUMAN_UAT"
+      },
+      "current_software_suite": "ACCEPTANCE_RESULTS.json",
+      "human_uat": "AWAITING_HUMAN_UAT"
+    },
+    {
+      "id": "projects_editor_rounds",
+      "implementation": "IMPLEMENTED",
+      "historical_evidence": {
+        "unit_test": "PASS_AUTOMATED",
+        "browser_test": "PASS_AUTOMATED",
+        "real_provider_test": "NOT_APPLICABLE",
+        "human_uat": "AWAITING_HUMAN_UAT"
+      },
+      "current_software_suite": "ACCEPTANCE_RESULTS.json",
+      "human_uat": "AWAITING_HUMAN_UAT"
+    },
+    {
+      "id": "formats",
+      "implementation": "IMPLEMENTED",
+      "historical_evidence": {
+        "unit_test": "PASS_AUTOMATED",
+        "browser_test": "PASS_AUTOMATED",
+        "real_provider_test": "NOT_APPLICABLE",
+        "human_uat": "AWAITING_HUMAN_UAT"
+      },
+      "current_software_suite": "ACCEPTANCE_RESULTS.json",
+      "human_uat": "AWAITING_HUMAN_UAT"
+    },
+    {
+      "id": "model_providers_training",
+      "implementation": "IMPLEMENTED",
+      "historical_evidence": {
+        "unit_test": "PASS_AUTOMATED",
+        "browser_test": "PASS_AUTOMATED",
+        "real_provider_test": "SEE_MEASURED_RESULTS",
+        "human_uat": "AWAITING_HUMAN_UAT"
+      },
+      "current_software_suite": "ACCEPTANCE_RESULTS.json",
+      "human_uat": "AWAITING_HUMAN_UAT"
+    },
+    {
+      "id": "boundary_preparation",
+      "implementation": "IMPLEMENTED",
+      "historical_evidence": {
+        "unit_test": "PASS_AUTOMATED",
+        "browser_test": "PASS_AUTOMATED",
+        "real_provider_test": "SEE_MEASURED_RESULTS",
+        "human_uat": "AWAITING_HUMAN_UAT"
+      },
+      "current_software_suite": "ACCEPTANCE_RESULTS.json",
+      "human_uat": "AWAITING_HUMAN_UAT"
+    },
+    {
+      "id": "real_source_tile_presets_custom_overlap",
+      "implementation": "IMPLEMENTED",
+      "historical_evidence": {
+        "unit_test": "PASS_AUTOMATED",
+        "browser_test": "PASS_AUTOMATED",
+        "real_provider_test": "PASS_512_AND_CUSTOM_FULL_NATURAL_IMAGE",
+        "human_uat": "AWAITING_HUMAN_UAT"
+      },
+      "current_software_suite": "ACCEPTANCE_RESULTS.json",
+      "human_uat": "AWAITING_HUMAN_UAT"
+    },
+    {
+      "id": "sam2_automatic_class_agnostic_full_image",
+      "implementation": "IMPLEMENTED",
+      "historical_evidence": {
+        "unit_test": "PASS_AUTOMATED",
+        "browser_test": "PASS_AUTOMATED",
+        "real_provider_test": "PASS_REAL_FULL_IMAGE",
+        "human_uat": "AWAITING_HUMAN_UAT"
+      },
+      "current_software_suite": "ACCEPTANCE_RESULTS.json",
+      "human_uat": "AWAITING_HUMAN_UAT"
+    },
+    {
+      "id": "sam3_automatic",
+      "implementation": "UNSUPPORTED_BY_VALIDATED_ADAPTER",
+      "historical_evidence": {
+        "unit_test": "UNSUPPORTED_BY_ADAPTER",
+        "browser_test": "CAPABILITY_EXPLAINED",
+        "real_provider_test": "UNSUPPORTED",
+        "human_uat": "AWAITING_HUMAN_UAT"
+      },
+      "current_software_suite": "ACCEPTANCE_RESULTS.json",
+      "human_uat": "AWAITING_HUMAN_UAT"
+    },
+    {
+      "id": "post_generation_classes_multiselection",
+      "implementation": "IMPLEMENTED",
+      "historical_evidence": {
+        "unit_test": "PASS_AUTOMATED",
+        "browser_test": "PASS_REAL_INSTALLED_UI_QA",
+        "real_provider_test": "PASS_ACTUAL_GENERATED_MASKS",
+        "human_uat": "AWAITING_HUMAN_UAT"
+      },
+      "current_software_suite": "ACCEPTANCE_RESULTS.json",
+      "human_uat": "AWAITING_HUMAN_UAT"
+    },
+    {
+      "id": "exact_mask_merge_brush_delete_persistent_history",
+      "implementation": "IMPLEMENTED",
+      "historical_evidence": {
+        "unit_test": "PASS_AUTOMATED",
+        "browser_test": "PASS_REAL_INSTALLED_UI_QA",
+        "real_provider_test": "PASS_ACTUAL_GENERATED_MASKS",
+        "human_uat": "AWAITING_HUMAN_UAT"
+      },
+      "current_software_suite": "ACCEPTANCE_RESULTS.json",
+      "human_uat": "AWAITING_HUMAN_UAT"
+    },
+    {
+      "id": "partial_generation_resume_and_protected_decisions",
+      "implementation": "IMPLEMENTED",
+      "historical_evidence": {
+        "unit_test": "PASS_AUTOMATED",
+        "browser_test": "PASS_INSTALLED_BROWSER_FIXTURES",
+        "real_provider_test": "NOT_RUN_REAL_INTERRUPTION",
+        "human_uat": "AWAITING_HUMAN_UAT"
+      },
+      "current_software_suite": "ACCEPTANCE_RESULTS.json",
+      "human_uat": "AWAITING_HUMAN_UAT"
+    },
+    {
+      "id": "annotation_boundary_opt_in",
+      "implementation": "IMPLEMENTED",
+      "historical_evidence": {
+        "unit_test": "PASS_AUTOMATED",
+        "browser_test": "PASS_AUTOMATED",
+        "real_provider_test": "PASS_REAL_ATTEMPT_UNMEASURED_ACCURACY",
+        "human_uat": "AWAITING_HUMAN_UAT"
+      },
+      "current_software_suite": "ACCEPTANCE_RESULTS.json",
+      "human_uat": "AWAITING_HUMAN_UAT"
+    },
+    {
+      "id": "accepted_generated_geometry_dataset_path",
+      "implementation": "IMPLEMENTED",
+      "historical_evidence": {
+        "unit_test": "PASS_AUTOMATED",
+        "browser_test": "PASS_REAL_INSTALLED_UI_EXPORTS",
+        "real_provider_test": "PASS_REAL_DATASET_CPU_LOADER_UNTRAINED",
+        "human_uat": "AWAITING_HUMAN_UAT"
+      },
+      "current_software_suite": "ACCEPTANCE_RESULTS.json",
+      "human_uat": "AWAITING_HUMAN_UAT"
+    }
+  ],
+  "note": "Historical feature evidence is inherited. Current release checks are in ACCEPTANCE_RESULTS.json and docs/RELEASE_VERIFICATION_RC24.json; rc23 model integration remains separately documented.",
+  "rc23_features": {
+    "tiled_training": "IMPLEMENTED_REAL_INTEGRATION_TESTED",
+    "matched_tiled_prediction": "IMPLEMENTED_REAL_INTEGRATION_TESTED",
+    "contextual_boundary": "IMPLEMENTED_REAL_SAM2_ATTEMPT_TESTED",
+    "confirmed_fragment_merge": "IMPLEMENTED_SYNTHETIC_SOFTWARE_TESTED",
+    "sam3_boundary": "IMPLEMENTED_UNMEASURED",
+    "natural_image_accuracy": "UNMEASURED"
+  },
+  "rc24_features": {
+    "dated_best_model_names": "IMPLEMENTED_UNIT_AND_BROWSER_TESTED"
+  }
+}

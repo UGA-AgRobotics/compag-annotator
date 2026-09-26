@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0rc24",
+  "prepared_at_utc": "2026-09-26T05:40:12.673954+00:00",
+  "status": "PASS_LOCAL_SOFTWARE_CHECKS",
+  "platform": "Ubuntu 22.04 WSL2 x86-64",
+  "publication": "NOT_PUBLISHED",
+  "scope": "GitHub packaging and documentation; executable application files unchanged from rc24",
+  "pytest": {
+    "distinct_tests_passed_after_targeted_rechecks": 760,
+    "browser_tests": 64,
+    "core_tests": 696,
+    "unresolved_failures": 0,
+    "remaining_skips": 0,
+    "initial_full_run": {
+      "passed": 757,
+      "failed": 1,
+      "skipped": 2
+    },
+    "resolution": "The only failure was a stale bundled Quickstart copy. Documentation synchronized; 77 packaging/release checks passed. Both optional CPU YOLO label-loader checks then passed with an existing runtime. Counts combine those runs, not a second full-suite run."
+  },
+  "javascript": {
+    "passed": 31,
+    "failed": 0
+  },
+  "python_lint": "PASS",
+  "local_publication_document_links": {
+    "checked": 24,
+    "broken": 0
+  },
+  "executable_files_unchanged": 102,
+  "dependency_warnings": "Deprecation warnings from Starlette/httpx and pycocotools/NumPy remain; they did not fail these checks. No dependency update or security certification is claimed.",
+  "new_real_training_or_inference": false,
+  "optional_loader_tests": "CPU label readers only; no training, GPU initialization or model download",
+  "historical_real_provider_evidence": "docs/TILED_PIPELINE_RC23.md and docs/INHERITED_MODEL_EVIDENCE.json",
+  "not_performed": [
+    "Native Ubuntu desktop acceptance",
+    "Formal human acceptance",
+    "GitHub remote Actions run",
+    "New model accuracy measurement",
+    "Remote push or publication"
+  ],
+  "artifact_verification": "Final built-wheel, source/archive and checksum results are in VERIFICATION.json supplied with release assets."
+}

@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools==84.0.0", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "compag-annotator"
+version = "1.0.0rc24"
+description = "Local image annotation, review, and optional instance-segmentation training"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "AGPL-3.0-only"
+authors = [
+  {name = "Hasan Jahanifar"},
+  {name = "Hasan Mirzakhaninafchi"},
+  {name = "Wesley M. Porter"},
+  {name = "Denis O. Kiobia"},
+  {name = "Glen C. Rains"},
+]
+license-files = ["LICENSE", "LICENSE_REVIEW.md", "THIRD_PARTY_NOTICES.md"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: POSIX :: Linux",
+]
+dependencies = [
+  "fastapi==0.141.1", "uvicorn==0.53.0", "Pillow==12.3.0", "numpy==2.5.3",
+  "shapely==2.1.2", "pycocotools==2.0.11", "PyYAML==6.0.3", "defusedxml==0.7.1",
+  "python-multipart==0.0.32", "platformdirs==4.11.12",
+  "starlette==1.7.0", "pydantic==2.13.5", "pydantic-core==2.46.5",
+  "annotated-types==0.8.0", "annotated-doc==0.0.5", "anyio==4.15.1",
+  "click==8.5.0", "h11==0.16.0", "idna==3.20", "typing-extensions==4.16.0",
+  "typing-inspection==0.4.4",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1", "httpx==0.28.1", "playwright==1.63.0"]
+dev = ["build==1.6.1", "ruff==0.16.9"]
+
+[project.scripts]
+compag-annotator = "compag_annotator.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["compag_annotator*"]
+namespaces = true
+
+[tool.setuptools.package-data]
+compag_annotator = ["models/requirements/*.txt", "assets/*.svg", "help/*.html", "help/*.md", "web/assets/*.html", "web/assets/*.css", "web/assets/*.js", "web/assets/*.json", "web/assets/*.svg", "web/assets/**/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = ["real_provider: requires an explicitly authorized real checkpoint and provider runtime", "human_uat: must never substitute automated actors for a human reviewer"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E9", "F63", "F7", "F82"]

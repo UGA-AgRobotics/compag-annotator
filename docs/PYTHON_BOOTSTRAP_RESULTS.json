@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-24",
+  "scope": "Installer bootstrap follow-up only; final coordinator product/provider/human acceptance is separate.",
+  "status": "PASS",
+  "pin": {
+    "file": "locks/python-bootstrap.json",
+    "python_version": "3.12.14",
+    "release_tag": "20260924",
+    "release_id": 395990880,
+    "release_commit": "6a729962cddc76630b59b1b895501b1539412524",
+    "asset_id": 586643535,
+    "size_bytes": 66890910,
+    "sha256": "5eae8cf79dd47fc2496a4fccc892936be831ce7a84d984b2299dfb1cdb592682",
+    "digest_verification": "Matched both official GitHub release and asset API metadata; actual downloaded size and SHA-256 matched before extraction/execution.",
+    "release_immutable": true
+  },
+  "environment": {
+    "os": "Ubuntu 22.04.5 LTS",
+    "kernel_kind": "WSL2",
+    "architecture": "x86_64",
+    "installer_host_python": "3.10.12",
+    "downloaded_application_python": "3.12.14",
+    "run_as_root": false,
+    "external_development_interpreter_required": false
+  },
+  "actual_execution": {
+    "download": "PASS",
+    "sha256_size_verification": "PASS",
+    "safe_extraction": "PASS",
+    "exact_runtime_version_check": "PASS",
+    "wheel_install_into_managed_runtime": "PASS",
+    "installed_runtime_identity": "PASS",
+    "installed_core_import_without_torch": "PASS",
+    "installed_cli_doctor": "PASS",
+    "bundled_ui_help_resources": "PASS",
+    "loopback_qa_session": "PASS",
+    "qa_actor": "automated_qa",
+    "cli_native_backup_and_restore": "PASS",
+    "desktop_file_validation": "PASS",
+    "cached_offline_reinstall": "PASS",
+    "fresh_offline_download_failure": "PASS",
+    "failed_download_left_no_partial_or_current_environment": true,
+    "unchanged_runtime_notice_files": 42
+  },
+  "wheel_used": {
+    "name": "compag_annotator-1.0.0rc1-py3-none-any.whl",
+    "sha256": "954a3862ad1c60919cc65d350ffbd0a0f756b239569d7e94eb85ad20c0002b3b",
+    "scope": "Previously built packaging integration wheel; final frozen release must be rebuilt by coordinator."
+  },
+  "automated_tests": {
+    "command": ".venv/bin/python -m pytest -q tests/test_packaging.py",
+    "passed": 63,
+    "failed": 0,
+    "log_sha256": "02d0d356b976edfc7446b0a2edd96331b256153f0758ea1beff64e760896809d",
+    "coverage": [
+      "explicit consent and no implicit download",
+      "official source pin validation",
+      "offline/interrupt cleanup",
+      "digest, byte count, HTML and gzip protections",
+      "corrupt cache rejection and offline cache reuse",
+      "HTTPS release redirect restrictions",
+      "platform restrictions and incompatible option rejection",
+      "installed helper pin retention and uninstall support"
+    ]
+  },
+  "lint": "PASS",
+  "source_scan": "PASS_AT_TEST_POINT_RECHECK_AFTER_FREEZE",
+  "not_run": [
+    "native Ubuntu 22.04 desktop acceptance",
+    "native Ubuntu 24.04 desktop acceptance",
+    "native menu click",
+    "human UAT",
+    "GPU/model checks by packaging owner",
+    "detached signature or attestation validation"
+  ],
+  "retained_evidence": "Private packaging-bootstrap directory: upstream API records, verified runtime/cache, installer logs, installed checks, runtime notice hashes, test logs and scans. No private paths or runtime binaries included in public source.",
+  "gpu_runs": 0,
+  "model_weight_downloads": 0,
+  "timings": "Stage timings were not measured; no runtime performance claim."
+}

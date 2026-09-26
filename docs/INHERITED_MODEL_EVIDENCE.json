@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "baseline_version": "1.0.0rc10",
+  "baseline_archive_sha256": "32a9e5e65210298b309a75898b1a7ebf1e8ddf11cb4393a06771ab801b294342",
+  "audit_bundle_sha256": "fb67c176762f14f7e434815066ea30c65edce23f6d465a7730d76f26bdd73c95",
+  "inheritance": "Provider, training, geometry, core annotation and boundary modules remain byte-identical. New dependency pins are validated separately and do not inherit a fresh-install or training claim.",
+  "new_fits": 0,
+  "sam2_full_image_512": {
+    "status": "INHERITED_PASS",
+    "tiles": 88,
+    "proposals": 358,
+    "generation_seconds": 324.78
+  },
+  "sam2_full_image_custom": {
+    "status": "INHERITED_PASS",
+    "tile_size": [
+      640,
+      384
+    ],
+    "tiles": 84,
+    "proposals": 427,
+    "generation_seconds": 355.941
+  },
+  "model_evidence": [
+    "SAM2 point/negative and box; both explicit recovery contexts",
+    "SAM3 local-only point/negative and box",
+    "Fresh-process reuse of two previously trained YOLO checkpoints; zero proposals at tested threshold"
+  ],
+  "accuracy_claim": false,
+  "human_uat": false,
+  "unchanged_modules": [
+    {
+      "path": "src/compag_annotator/providers/yolo.py",
+      "sha256": "aef1dbef3d08f65219a47ef1742673d31020b9ed6ad42f4a17f4790a038014a1"
+    },
+    {
+      "path": "src/compag_annotator/providers/common.py",
+      "sha256": "3c9525a8df8f8579615e002c13e997ae8fae503138fd9cacb55ef71ffb57a24a"
+    },
+    {
+      "path": "src/compag_annotator/providers/process.py",
+      "sha256": "7432700f131cc3b5457a50210256b433eacfc5cbcbf8f7cc7a287bb62c552272"
+    },
+    {
+      "path": "src/compag_annotator/providers/prompt_settings.py",
+      "sha256": "1500b04aacf89fd083a3ef9283ee28fbbfd709e5fd90e9d9eaf051bbd85a75c2"
+    },
+    {
+      "path": "src/compag_annotator/providers/automatic.py",
+      "sha256": "2874e9f2b41ab5aef653433856034fd28b1682c1f4badd8c703f7bbdfc96eca1"
+    },
+    {
+      "path": "src/compag_annotator/providers/sam2.py",
+      "sha256": "21400c58904096469a51cb8a5ed8298f6f55c31763d9d8ccab4c4c587260b536"
+    },
+    {
+      "path": "src/compag_annotator/providers/worker.py",
+      "sha256": "3d399e6a2d6835131f298388e483df8f9f69a99a7f7eb8601b8a44680a94c2f7"
+    },
+    {
+      "path": "src/compag_annotator/providers/__init__.py",
+      "sha256": "cd1681bdcf73869d29d0fdafa2ce30dece30eb4820de42e2a5ea0516b56a4c8f"
+    },
+    {
+      "path": "src/compag_annotator/providers/protocol.py",
+      "sha256": "d2441cc5802a43093be4d447c669f04bdfa4e82bec2c1277c3d8687521b0f2c0"
+    },
+    {
+      "path": "src/compag_annotator/providers/sam3.py",
+      "sha256": "892e798985e0878dd457de2058b7857ae3dc59021c5cf7c27db230e69096d600"
+    },
+    {
+      "path": "src/compag_annotator/training/snapshots.py",
+      "sha256": "d60ee3f5b15f31dad2d784fb02b46fad6936e638f8a23c64187bed7822437146"
+    },
+    {
+      "path": "src/compag_annotator/training/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/compag_annotator/geometry/rle.py",
+      "sha256": "a20aa1bfe061552a7f9a77f42944b0e46a0ab50db406998110d7fef1af8ee417"
+    },
+    {
+      "path": "src/compag_annotator/geometry/__init__.py",
+      "sha256": "212bda95d40dbfc976da11f357cd6af19dfeb97903644acbf167b15e5fd19d2f"
+    },
+    {
+      "path": "src/compag_annotator/geometry/tiling.py",
+      "sha256": "984624c1ae1518903376f7e9dc09c76e89aa44447fe01f118be6f9a7b13e2596"
+    },
+    {
+      "path": "src/compag_annotator/core/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/compag_annotator/core/deletion.py",
+      "sha256": "98ea2f43188fbcd2d809c529e7918ee8d327eb205f4359c59f80769fdcd7f7c3"
+    },
+    {
+      "path": "src/compag_annotator/core/generation.py",
+      "sha256": "738f5f1cb0014878a91faa8e6ffbb8d62a0f082426c216e059fcef4dda74a71f"
+    },
+    {
+      "path": "src/compag_annotator/core/catalog.py",
+      "sha256": "289e515b98e967ee24891f229c94ee36f1fc3dbc86ad2c09f6fe594483b54838"
+    },
+    {
+      "path": "src/compag_annotator/core/dataset_export.py",
+      "sha256": "045f947243b69809ff2dd3e698309ed0a749dc0a8195b502743f2cebf658a1fb"
+    },
+    {
+      "path": "src/compag_annotator/core/projects.py",
+      "sha256": "93534ad45a508dfedcfe4b4c19921b2eeba925d75c3333c5c2937f5d466c8b79"
+    },
+    {
+      "path": "src/compag_annotator/core/selection.py",
+      "sha256": "597ad6715900f9c309a47412d63b57ddb7bb30d9b4d13f927550693d83fda533"
+    },
+    {
+      "path": "src/compag_annotator/core/rounds.py",
+      "sha256": "a722a24b8384b0155ddfad28755e1a0e4ab2a11811c62476c1cb1d1a5f7a31c0"
+    },
+    {
+      "path": "src/compag_annotator/core/assist.py",
+      "sha256": "52f4b55df04171540d5eb77db6950013e4ea6d2795900e536ffb78d0bf257871"
+    },
+    {
+      "path": "src/compag_annotator/boundary/preparation.py",
+      "sha256": "68e6f7fc9e96c4f4ffbb177db905c14eb57b3cbf02147f8c85b892d899766b60"
+    },
+    {
+      "path": "src/compag_annotator/boundary/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "historical_records": [
+    "docs/MEASURED_RESULTS.json",
+    "docs/ADDENDUM_MEASURED_RESULTS.json",
+    "docs/ACCEPTANCE_RC1_HISTORY.json"
+  ]
+}

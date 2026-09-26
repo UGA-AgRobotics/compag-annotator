@@ -1,0 +1,510 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-24",
+  "environment": {
+    "platform": "Ubuntu 22.04.5 / WSL2 x86_64",
+    "gpu": "NVIDIA RTX 4090 24 GiB",
+    "core_python_at_real_training": "3.12.7",
+    "standalone_installer_python": "3.12.14",
+    "sam2_torch": "2.7.1+cu128",
+    "yolo_torch": "2.7.1+cu128",
+    "ultralytics": "8.4.162"
+  },
+  "scope": "Bounded operational smoke with six authorized full images and automated three-class polygon fixtures; not scientific ground truth; Addendum01 actual classless AMG and canonical edited-mask evidence is separate in ADDENDUM_MEASURED_RESULTS.json.",
+  "human_uat": "AWAITING_HUMAN_UAT",
+  "accuracy_generalization_claim": false,
+  "full_image_dimensions": [
+    3024,
+    4032
+  ],
+  "original_count": 6,
+  "training_budget": {
+    "allowed_jobs": 2,
+    "used_jobs": 2,
+    "epochs_per_job": 3,
+    "additional_training_not_authorized_under_current_budget": true
+  },
+  "sam2": {
+    "status": "PASS",
+    "architecture": "sam2.1_hiera_small",
+    "checkpoint_sha256": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38",
+    "calls": [
+      {
+        "name": "gpu_points",
+        "wall_seconds": 4.832148068999231,
+        "coverage": {
+          "width": 3024,
+          "height": 4032,
+          "full_image": true
+        },
+        "encoding_cache_hit": false,
+        "timings": {
+          "image_encoding_seconds": 0.7520698949956568,
+          "prompt_seconds": 0.3015181709997705,
+          "load_seconds": 2.9857292599990615,
+          "cold_model_load": true,
+          "worker_total_seconds": 4.476592225000786
+        }
+      },
+      {
+        "name": "gpu_box",
+        "wall_seconds": 0.9219292359994142,
+        "coverage": {
+          "width": 3024,
+          "height": 4032,
+          "full_image": true
+        },
+        "encoding_cache_hit": true,
+        "timings": {
+          "image_encoding_seconds": 0.24549750800360925,
+          "prompt_seconds": 0.09300291600084165,
+          "load_seconds": 2.030006726272404e-06,
+          "cold_model_load": false,
+          "worker_total_seconds": 0.6342464950066642
+        }
+      },
+      {
+        "name": "cpu_points",
+        "wall_seconds": 6.7387285599979805,
+        "coverage": {
+          "width": 3024,
+          "height": 4032,
+          "full_image": true
+        },
+        "encoding_cache_hit": false,
+        "timings": {
+          "image_encoding_seconds": 4.990215696001542,
+          "prompt_seconds": 0.5082601450048969,
+          "load_seconds": 0.49597808600083226,
+          "cold_model_load": true,
+          "worker_total_seconds": 6.404290997998032
+        }
+      }
+    ],
+    "unvalidated_catalog_presets": [
+      "Tiny",
+      "Base Plus",
+      "Large"
+    ]
+  },
+  "yolo_training": [
+    {
+      "stage": "real_training_1",
+      "status": "complete",
+      "total_job_seconds": 15.178,
+      "provider_training_seconds": 8.287,
+      "epochs": 3,
+      "architecture": "yolo26n-seg",
+      "train_count": 2,
+      "validation_count": 2,
+      "train_validation_disjoint": true,
+      "checkpoint_sha256": "0f85a6f47bad1991fe0e420fa59458837c99eddfe1fdf1660ce82759cc6d4556",
+      "snapshot_sha256": "0e1564e6cf0c3aabf5711b924a552fe58a4d550989e9f108344d0ac8d3a9c9dc",
+      "fresh_checkpoint_load": true,
+      "qa_fixture_not_human_labels": true,
+      "metrics": {
+        "fitness": 0.0,
+        "metrics/mAP50(B)": 0.0,
+        "metrics/mAP50(M)": 0.0,
+        "metrics/mAP50-95(B)": 0.0,
+        "metrics/mAP50-95(M)": 0.0,
+        "metrics/precision(B)": 0.0,
+        "metrics/precision(M)": 0.0,
+        "metrics/recall(B)": 0.0,
+        "metrics/recall(M)": 0.0
+      },
+      "boundary_invocations": 0
+    },
+    {
+      "stage": "real_training_2",
+      "status": "complete",
+      "total_job_seconds": 15.616,
+      "provider_training_seconds": 8.611,
+      "epochs": 3,
+      "architecture": "yolo26n-seg",
+      "train_count": 4,
+      "validation_count": 2,
+      "train_validation_disjoint": true,
+      "checkpoint_sha256": "f9a6a424f537565b74305a3a47f184f28aedf0ff6352755ae841daf2c4fe4f31",
+      "snapshot_sha256": "36fe3e758dd97595c86dbd5e1e63241eeeef9e055fb41d150e766e6a31313f90",
+      "fresh_checkpoint_load": true,
+      "qa_fixture_not_human_labels": true,
+      "metrics": {
+        "fitness": 0.0,
+        "metrics/mAP50(B)": 0.0,
+        "metrics/mAP50(M)": 0.0,
+        "metrics/mAP50-95(B)": 0.0,
+        "metrics/mAP50-95(M)": 0.0,
+        "metrics/precision(B)": 0.0,
+        "metrics/precision(M)": 0.0,
+        "metrics/recall(B)": 0.0,
+        "metrics/recall(M)": 0.0
+      },
+      "boundary_invocations": 0
+    }
+  ],
+  "next_round_new_model_use": {
+    "fresh_process": true,
+    "loaded_hash_matches_first_trained_checkpoint": true,
+    "originals_processed": 2,
+    "proposal_count": 0,
+    "interpretation": "No instances passed the default inference threshold after three QA-fixture epochs; mechanics verified, useful segmentation accuracy not established"
+  },
+  "stages": [
+    {
+      "stage": "six_full_image_import",
+      "status": "complete",
+      "wall_seconds": 18.630484692999744
+    },
+    {
+      "stage": "real_sam2_points",
+      "status": "complete",
+      "wall_seconds": 5.107857791001152
+    },
+    {
+      "stage": "real_yolo_preflight",
+      "status": "complete",
+      "wall_seconds": 4.566177171000163
+    },
+    {
+      "stage": "real_training_1",
+      "status": "complete",
+      "wall_seconds": 15.178154322995397
+    },
+    {
+      "stage": "fresh_new_model_next_round",
+      "status": "complete",
+      "wall_seconds": 8.079948305996368
+    },
+    {
+      "stage": "real_training_2",
+      "status": "complete",
+      "wall_seconds": 15.616042718000244
+    },
+    {
+      "stage": "second_model_fresh_probe",
+      "status": "complete",
+      "wall_seconds": 4.0637414359953254
+    },
+    {
+      "stage": "export_native",
+      "status": "complete",
+      "wall_seconds": 2.0545046150000417
+    },
+    {
+      "stage": "export_coco",
+      "status": "complete",
+      "wall_seconds": 19.633578601999034
+    },
+    {
+      "stage": "export_yolo_seg",
+      "status": "complete",
+      "wall_seconds": 20.152538825997908
+    }
+  ],
+  "default_boundary_invocations": 0,
+  "boundary_opt_in": {
+    "actor": "automated_qa",
+    "human_uat": false,
+    "accuracy_claim": false,
+    "fixture": "Simulated tile truncation of a real SAM mask, not human ground truth",
+    "passed": true,
+    "preparation_wall_seconds": 1.1607334799991804,
+    "original_preserved": true,
+    "pending_review_gate": true,
+    "retained_unchanged": true,
+    "suggested_mask_available": false,
+    "checkpoint_sha256": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38",
+    "coverage": {
+      "width": 3024,
+      "height": 4032,
+      "full_image": true
+    },
+    "full_mask_pixels": 1744853,
+    "simulated_truncated_pixels": 1720331,
+    "boundary_invocations": 1,
+    "non_training_invocations": 0
+  },
+  "actual_export_roundtrips": {
+    "scope": "actual six-image automated QA exports; no human UAT",
+    "passed": true,
+    "formats": {
+      "native": {
+        "exact_masks": true,
+        "stable_ids": true,
+        "classes_rounds_preserved": true,
+        "weights_included": false
+      },
+      "coco": {
+        "exact_masks": true,
+        "annotation_count": 18,
+        "class_image_binding": true,
+        "human_approval_not_fabricated": true
+      },
+      "yolo_seg": {
+        "exact_masks": true,
+        "annotation_count": 18,
+        "class_image_binding": true,
+        "human_approval_not_fabricated": true
+      }
+    }
+  },
+  "sam3": {
+    "checkpoint_downloaded": false,
+    "checkpoint_source": "User-supplied authorized local preserved asset reference",
+    "checkpoint_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+    "width": 3024,
+    "height": 4032,
+    "actor": "automated_qa",
+    "human_uat": false,
+    "passed": true,
+    "calls": [
+      {
+        "name": "points",
+        "passed": true,
+        "wall_seconds": 17.962251831006142,
+        "mask_pixels": [
+          1078,
+          1946,
+          2465995
+        ],
+        "coverage": {
+          "width": 3024,
+          "height": 4032,
+          "full_image": true
+        },
+        "loaded_checkpoint_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+        "encoding_cache_hit": false,
+        "timings": {
+          "image_encoding_seconds": 0.4765641509948182,
+          "prompt_seconds": 0.5675728480055113,
+          "load_seconds": 13.213839311996708,
+          "cold_model_load": true,
+          "worker_total_seconds": 16.092759833001764
+        },
+        "runtime": {
+          "source_revision": "2345a4ad109ac29c569da749c91d84f10dc08c40",
+          "distribution_version": "0.1.0",
+          "torch": "2.10.0+cu128",
+          "torchvision": "0.25.0+cu128",
+          "python": "3.12.7"
+        }
+      },
+      {
+        "name": "box",
+        "passed": true,
+        "wall_seconds": 3.952537730001495,
+        "mask_pixels": [
+          565185,
+          59305,
+          1125185
+        ],
+        "coverage": {
+          "width": 3024,
+          "height": 4032,
+          "full_image": true
+        },
+        "loaded_checkpoint_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+        "encoding_cache_hit": true,
+        "timings": {
+          "image_encoding_seconds": 0.22629910700197797,
+          "prompt_seconds": 0.021514432999538258,
+          "load_seconds": 3.2180032576434314e-06,
+          "cold_model_load": false,
+          "worker_total_seconds": 2.102835079000215
+        },
+        "runtime": {
+          "source_revision": "2345a4ad109ac29c569da749c91d84f10dc08c40",
+          "distribution_version": "0.1.0",
+          "torch": "2.10.0+cu128",
+          "torchvision": "0.25.0+cu128",
+          "python": "3.12.7"
+        }
+      }
+    ],
+    "status": "PASS_REAL_LOCAL_CHECKPOINT",
+    "precision": "bfloat16",
+    "runtime_scope": "still_image_interactivity; optional video decoder omitted"
+  },
+  "failed_attempts_preserved": [
+    "Initial SAM2 pinned-API keyword mismatch, fixed and real retry passed",
+    "Initial SAM3 runtime: optional CPython3.6 decord wheel ABI rejected; removed from audited still-image scope; real runtime/strictcheckpointload and prompting retry passed",
+    "Initial unit-suite child lacked source import path; fixed isolation and all309tests passed"
+  ],
+  "unmeasured": [
+    "human review time",
+    "scientific accuracy/generalization",
+    "native Ubuntu 22.04/24.04 desktop acceptance",
+    "actual interrupted training resume (two-job budget exhausted)"
+  ],
+  "automated_tests": {
+    "unit_integration_passed": 516,
+    "unit_failed": 0,
+    "unit_skipped": 0,
+    "browser_installed_passed": 20,
+    "browser_failed": 0,
+    "installed_final_identity": "dist/FINAL_VERIFICATION.json"
+  },
+  "standalone_final_provider_validation": {
+    "status": "PASS",
+    "python": "3.12.14",
+    "research_python_dependency": false,
+    "checkpoint_count": 5,
+    "training_jobs_started": 0,
+    "calls": [
+      {
+        "provider": "yolo",
+        "sha256": "361fbfabab285c3237700b6bb91d7ecfa602cd945fffda8dbe1242829b71e73f",
+        "architecture": "yolo26n-seg",
+        "runtime": {
+          "source_revision": "91392240568a261d2cd6e37b1684cbfedf3cd1e5",
+          "distribution_version": "8.4.162",
+          "torch": "2.7.1+cu128",
+          "torchvision": "0.22.1+cu128",
+          "python": "3.12.14"
+        },
+        "wall_seconds": 4.3401940379990265,
+        "coverage": {
+          "width": 3024,
+          "height": 4032,
+          "full_image": true
+        },
+        "proposal_count": 2,
+        "timings": {
+          "inference_seconds": 2.432717875999515,
+          "load_seconds": 1.4927689469986944,
+          "cold_model_load": true,
+          "worker_total_seconds": 3.9457218710012967
+        }
+      },
+      {
+        "provider": "yolo",
+        "sha256": "0f85a6f47bad1991fe0e420fa59458837c99eddfe1fdf1660ce82759cc6d4556",
+        "architecture": "custom-seg",
+        "runtime": {
+          "source_revision": "91392240568a261d2cd6e37b1684cbfedf3cd1e5",
+          "distribution_version": "8.4.162",
+          "torch": "2.7.1+cu128",
+          "torchvision": "0.22.1+cu128",
+          "python": "3.12.14"
+        },
+        "wall_seconds": 3.6541588800027966,
+        "coverage": {
+          "width": 3024,
+          "height": 4032,
+          "full_image": true
+        },
+        "proposal_count": 0,
+        "timings": {
+          "inference_seconds": 1.91499906500394,
+          "load_seconds": 1.433852462003415,
+          "cold_model_load": true,
+          "worker_total_seconds": 3.370096029000706
+        }
+      },
+      {
+        "provider": "yolo",
+        "sha256": "f9a6a424f537565b74305a3a47f184f28aedf0ff6352755ae841daf2c4fe4f31",
+        "architecture": "custom-seg",
+        "runtime": {
+          "source_revision": "91392240568a261d2cd6e37b1684cbfedf3cd1e5",
+          "distribution_version": "8.4.162",
+          "torch": "2.7.1+cu128",
+          "torchvision": "0.22.1+cu128",
+          "python": "3.12.14"
+        },
+        "wall_seconds": 3.6216300660016714,
+        "coverage": {
+          "width": 3024,
+          "height": 4032,
+          "full_image": true
+        },
+        "proposal_count": 0,
+        "timings": {
+          "inference_seconds": 1.918275605996314,
+          "load_seconds": 1.3952522409963422,
+          "cold_model_load": true,
+          "worker_total_seconds": 3.3353160839978955
+        }
+      },
+      {
+        "provider": "sam2",
+        "sha256": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38",
+        "architecture": "sam2.1_hiera_small",
+        "runtime": {
+          "source_revision": "2b90b9f5ceec907a1c18123530e92e794ad901a4",
+          "distribution_version": "1.0",
+          "torch": "2.7.1+cu128",
+          "torchvision": "0.22.1+cu128",
+          "python": "3.12.14"
+        },
+        "wall_seconds": 4.749653879000107,
+        "coverage": {
+          "width": 3024,
+          "height": 4032,
+          "full_image": true
+        },
+        "proposal_count": 3,
+        "timings": {
+          "image_encoding_seconds": 0.7445779379995656,
+          "prompt_seconds": 0.3591748219987494,
+          "load_seconds": 2.9510595079991617,
+          "cold_model_load": true,
+          "worker_total_seconds": 4.439100884999789
+        }
+      },
+      {
+        "provider": "sam3",
+        "sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+        "architecture": "sam3-image",
+        "runtime": {
+          "source_revision": "2345a4ad109ac29c569da749c91d84f10dc08c40",
+          "distribution_version": "0.1.0",
+          "torch": "2.10.0+cu128",
+          "torchvision": "0.25.0+cu128",
+          "python": "3.12.14"
+        },
+        "wall_seconds": 18.048933887999738,
+        "coverage": {
+          "width": 3024,
+          "height": 4032,
+          "full_image": true
+        },
+        "proposal_count": 3,
+        "timings": {
+          "image_encoding_seconds": 0.5173421430008602,
+          "prompt_seconds": 0.5954657120018965,
+          "load_seconds": 13.041779469000176,
+          "cold_model_load": true,
+          "worker_total_seconds": 15.992428900004597
+        }
+      }
+    ]
+  },
+  "base_automated_tests": {
+    "non_browser": {
+      "passed": 309,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 7.94,
+      "real_ultralytics_cpu_loader_included": true
+    },
+    "browser_source": {
+      "passed": 9,
+      "failed": 0,
+      "seconds": 29.67
+    },
+    "provider_unit_subset": 59,
+    "packaging_unit_subset": 63,
+    "browser_installed": {
+      "passed": 9,
+      "failed": 0,
+      "seconds": 29.91,
+      "server_outside_source": true,
+      "caller_pythonpath_removed": true
+    }
+  },
+  "addendum_results": "ADDENDUM_MEASURED_RESULTS.json",
+  "historical_base_checkpoint": "5d98629",
+  "base_boundary_policy_note": "Historical training-only measurement retained; Addendum01 now explicitly authorizes scoped annotation recovery as well."
+}

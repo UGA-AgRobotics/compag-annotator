@@ -1,0 +1,148 @@
+{
+  "schema_version": 2,
+  "version": "1.0.0rc11",
+  "date": "2026-09-25",
+  "license": "AGPL-3.0-only",
+  "publication": "NOT_PUBLISHED",
+  "release_status": "PRERELEASE_REVIEW_CANDIDATE",
+  "tested_platform": "Ubuntu 22.04.5 WSL2 x86_64, Python 3.12.14",
+  "current_software_tests": {
+    "core_installed": {
+      "tests": 601,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 601
+    },
+    "browser_installed": {
+      "tests": 38,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 38
+    },
+    "javascript": {
+      "passed": 11,
+      "failed": 0
+    },
+    "ruff": "PASS",
+    "installer_after_pip_hardening": {
+      "tests": 27,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 27
+    }
+  },
+  "claims_basis": "Complete installed-wheel suites ran on the security candidate. Final frozen wheel identity and post-freeze checks are in outer FINAL_VERIFICATION.json. Reports/documentation may be updated to record results; executable module/resource identity is checked against the tested candidate.",
+  "installer_lifecycle": {
+    "status": "PASS",
+    "from_version": "1.0.0rc10",
+    "to_version": "1.0.0rc11",
+    "rc10_wheel_sha256": "fb26e10f2d0049175753ea20b034ea7bd16f9fcb53c216083411023be99b373e",
+    "rc11_wheel_sha256": "a943b656d7772ab29a562339efa51683e6bdabc326b8510726ddd6b40e34a960",
+    "fresh_user_space_install": true,
+    "idempotence": true,
+    "bad_hash_preserves_current": true,
+    "cross_version_rollback": true,
+    "real_synthetic_project_preserved_byte_for_byte": true,
+    "model_sentinel_preserved": true,
+    "uninstall_preserves_project": true,
+    "spaces_unicode_paths": true,
+    "native_desktop_menu_click": "NOT_TESTED",
+    "runtime_route": "Existing verified standalone Python3.12; new download not repeated"
+  },
+  "theme_contrast": [
+    {
+      "system_theme": "dark",
+      "app_theme": "dark",
+      "styles": {
+        "background": "rgb(23, 29, 25)",
+        "color": "rgb(230, 236, 232)",
+        "colorScheme": "dark",
+        "inputBackground": "rgb(17, 24, 19)",
+        "inputColor": "rgb(237, 243, 238)"
+      },
+      "contrast_ratio": 14.29440875520014,
+      "input_contrast_ratio": 16.028776382924708
+    },
+    {
+      "system_theme": "light",
+      "app_theme": "dark",
+      "styles": {
+        "background": "rgb(23, 29, 25)",
+        "color": "rgb(230, 236, 232)",
+        "colorScheme": "dark",
+        "inputBackground": "rgb(17, 24, 19)",
+        "inputColor": "rgb(237, 243, 238)"
+      },
+      "contrast_ratio": 14.29440875520014,
+      "input_contrast_ratio": 16.028776382924708
+    },
+    {
+      "system_theme": "dark",
+      "app_theme": "light",
+      "styles": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(35, 52, 46)",
+        "colorScheme": "light",
+        "inputBackground": "rgb(255, 255, 255)",
+        "inputColor": "rgb(39, 59, 46)"
+      },
+      "contrast_ratio": 13.107690264254229,
+      "input_contrast_ratio": 11.991063600681116
+    },
+    {
+      "system_theme": "light",
+      "app_theme": "light",
+      "styles": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(35, 52, 46)",
+        "colorScheme": "light",
+        "inputBackground": "rgb(255, 255, 255)",
+        "inputColor": "rgb(39, 59, 46)"
+      },
+      "contrast_ratio": 13.107690264254229,
+      "input_contrast_ratio": 11.991063600681116
+    }
+  ],
+  "history_ext4": {
+    "status": "PASS",
+    "host_filesystem": "WSL2 native Linux filesystem",
+    "method": "Same 785-mask audit database copied with SQLite backup; original read-only and unchanged. Timings are direct component calls, not click-to-paint UI measurements.",
+    "timings": {
+      "assign_two_seconds": 0.47373376099858433,
+      "undo_seconds": 0.07247161099803634,
+      "redo_seconds": 0.07737181600532494
+    },
+    "database_bytes_before": 328916992,
+    "database_bytes_after": 332730368,
+    "persistent_undo_redo": true,
+    "source_sha256_before_after": "2458f89a9bd3a12385bf190023aeb314d0de1db413c4783c692ab321f927dbd9",
+    "history_deleted": false
+  },
+  "provider_security_validation": {
+    "status": "PASS_DEPENDENCY_CHECKS_IMPORTS_AND_CUDA_LOCK_RESOLUTION",
+    "method": "Separate small patched package environments with read-only inherited ML binaries; no original/runtime mutation. Not a fresh complete provider install.",
+    "new_real_inference": "NOT_RUN_AWAITING_ADDITIONAL_BUDGET_CONFIRMATION",
+    "new_training_fits": 0,
+    "new_cpu_flavor_full_install": "NOT_RUN",
+    "residual_torch_advisories": "docs/DEPENDENCY_SECURITY.md"
+  },
+  "inherited_model_evidence": "docs/INHERITED_MODEL_EVIDENCE.json",
+  "historical_requirement_inventory": "docs/ACCEPTANCE_RC1_HISTORY.json",
+  "native_ubuntu_22_04_desktop": "NOT_TESTED",
+  "native_ubuntu_24_04_desktop": "NOT_TESTED",
+  "human_uat": "AWAITING_HUMAN_UAT",
+  "remote_ci": "NOT_RUN_LOCAL_EQUIVALENTS_EXECUTED",
+  "git_history": "PUBLIC_TREE_HAS_NO_GIT_HISTORY; private development history is excluded. Future commits require their own scan.",
+  "stable_release_gates": [
+    "Genuine human workflow acceptance",
+    "Native Ubuntu desktop acceptance",
+    "Any broader safety claim must address residual optional Torch advisories and trusted-model limits"
+  ],
+  "warnings": [
+    "Upstream Starlette TestClient/httpx and pycocotools/NumPy deprecation warnings remain; tests passed and no warning was silenced.",
+    "Model accuracy, recovery accuracy and arbitrary hardware performance are not established."
+  ]
+}

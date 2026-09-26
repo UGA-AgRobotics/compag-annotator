@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="COMPAG Annotator">
+<rect x="4" y="4" width="120" height="120" rx="28" fill="#122c3b"/>
+<path d="M32 42 78 30 99 70 66 101 29 81Z" fill="#40c9ad" fill-opacity=".25" stroke="#40c9ad" stroke-width="5" stroke-linejoin="round"/>
+<g fill="#f6faf9"><circle cx="32" cy="42" r="6"/><circle cx="78" cy="30" r="6"/><circle cx="99" cy="70" r="6"/><circle cx="66" cy="101" r="6"/><circle cx="29" cy="81" r="6"/></g>
+<path d="m47 64 12 12 23-27" fill="none" stroke="#f6faf9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

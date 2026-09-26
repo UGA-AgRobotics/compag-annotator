@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0rc24",
+  "publication": "NOT_PUBLISHED",
+  "scope": "GitHub packaging and documentation; executable application files unchanged from rc24",
+  "current_evidence": "docs/RELEASE_VERIFICATION_RC24.json",
+  "software_tests_passed_after_rechecks": 760,
+  "javascript_tests_passed": 31,
+  "historical_naming_acceptance": "docs/ACCEPTANCE_RC24_NAMING_HISTORY.json",
+  "historical_real_provider_acceptance": "docs/ACCEPTANCE_RC23_HISTORY.json",
+  "human_uat": false,
+  "native_desktop_acceptance": false,
+  "new_training_jobs": 0,
+  "new_inference_jobs": 0,
+  "artifact_verification": "VERIFICATION.json in release assets"
+}

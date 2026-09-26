@@ -1,0 +1,18 @@
+# Your first project
+
+Open **COMPAG Annotator** from the Ubuntu applications menu. For first use you can start manually; **Models & AI** is optional.
+
+These workflows are implemented. See ACCEPTANCE_RESULTS.json for the current automated checks and the separate historical real-model evidence; human acceptance remains a separate check.
+
+1. Open **Projects**, enter a project name, and choose a storage folder. You may leave classes empty and create them later in the editor.
+2. Open **Images** and select individual images, several files or a folder. Check the import results for unreadable files and duplicates. Keep copy-managed storage unless you specifically want linked source files.
+3. Open an image in **Annotate**. Draw/edit manually, or choose **Generate masks / Segment everything** with a ready SAM2 provider. No YOLO or starting class is required. Select **Whole image** or source tiles: 256×256, 512×512, 1024×1024 or **Custom** independent width × height. Preview the full grid and overlap; new projects start at 512×512 and 25% overlap. These are source crops, not model encoder size or training image size.
+4. Wait for the current full-image generation in **Jobs**. A cancelled/failed run is partial, not complete coverage. Returned masks are proposals, not a guarantee that all objects were found. SAM3 automatic generation remains unavailable until separately implemented and tested.
+5. Choose **Select**, then click a mask, Shift/Ctrl-click several, or use object-list controls. Create a class in place and choose **Assign class**; this keeps separate instances and does not accept them. Use the list or overlap cycling to reach smaller masks underneath others. **Paint class**, **SAM prompt** and **Edit geometry** are separate modes.
+6. For fragments of one object in the same image, preview **Merge selected masks** and confirm the target class or unassigned result. Merge keeps the exact existing pixels, holes and disconnected parts; it adds no missing pixels. Correct separately with brush/SAM preview. Reject/delete unwanted proposals, use Undo/Redo and verify saved work after reopening. Merge/edit/delete work without a model.
+7. Review and accept each target object. Resolve relevant drafts/unassigned proposals or dismiss non-target ones. Mark the image complete only after checking for missing and incorrect objects throughout the full image. Hiding masks or assigning classes does not establish completeness.
+8. In **Export**, keep reviewed-only selection for accepted work. Native backup keeps project history; COCO RLE keeps detailed masks. Strict YOLO segmentation may reject merged holes/disconnected parts; read the report before any explicit measured approximation. Rounds and training use this same accepted state, with superseded merge parents excluded.
+
+Heavy boundary recovery stays **OFF by default**. It is allowed only with explicit consent for a scoped job in **automatic-mask annotation**, **training preparation**, or prediction with **Boundary check** explicitly enabled. In Generate masks, use the unchecked after-generation option, or run a check later on selected proposals/the current layer. Review suggested changes before applying them. Consent in one context does not enable the other; import, image opening, edits, labels, prompts, merging, ordinary prediction, round changes and export never start it automatically. A physical photo edge is not an internal tile seam.
+
+You can reopen your project and continue later. Use **Jobs** for progress, cancellation and failures. **Help** works offline; **Settings** shows diagnostics and storage. Rounds and training can be added when you need them.

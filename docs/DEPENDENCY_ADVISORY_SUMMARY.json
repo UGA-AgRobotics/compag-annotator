@@ -1,0 +1,1698 @@
+{
+  "schema_version": 1,
+  "checked_utc": "2026-09-25T20:33:20.992891+00:00",
+  "queried": 127,
+  "unavailable": 0,
+  "affected": 3,
+  "scope": "Exact pins in core/build/test/development and provider locks plus bootstrap pip. +cpu/+cu128 pins queried using public base version. No blanket vulnerability-free claim.",
+  "packages": [
+    {
+      "name": "Pillow",
+      "version": "12.3.0",
+      "query_version": "12.3.0",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/Pillow/12.3.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "query_version": "6.0.3",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/PyYAML/6.0.3/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "query_version": "0.0.5",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/annotated-doc/0.0.5/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "query_version": "0.8.0",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/annotated-types/0.8.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "antlr4-python3-runtime",
+      "version": "4.9.3",
+      "query_version": "4.9.3",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/antlr4-python3-runtime/4.9.3/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "query_version": "4.15.1",
+      "local_variant": false,
+      "scopes": [
+        "core",
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/anyio/4.15.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "build",
+      "version": "1.6.1",
+      "query_version": "1.6.1",
+      "local_variant": false,
+      "scopes": [
+        "dev"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/build/1.6.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "query_version": "2026.7.22",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/certifi/2026.7.22/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.1",
+      "query_version": "3.5.1",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/charset-normalizer/3.5.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "query_version": "8.5.0",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/click/8.5.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "cloudpickle",
+      "version": "3.1.2",
+      "query_version": "3.1.2",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/cloudpickle/3.1.2/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "contourpy",
+      "version": "1.3.3",
+      "query_version": "1.3.3",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/contourpy/1.3.3/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "cuda-bindings",
+      "version": "12.9.4",
+      "query_version": "12.9.4",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/cuda-bindings/12.9.4/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "cuda-pathfinder",
+      "version": "1.8.2",
+      "query_version": "1.8.2",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/cuda-pathfinder/1.8.2/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1",
+      "query_version": "0.12.1",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/cycler/0.12.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "defusedxml",
+      "version": "0.7.1",
+      "query_version": "0.7.1",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/defusedxml/0.7.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "einops",
+      "version": "0.8.1",
+      "query_version": "0.8.1",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/einops/0.8.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "fastapi",
+      "version": "0.141.1",
+      "query_version": "0.141.1",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/fastapi/0.141.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "filelock",
+      "version": "4.0.3",
+      "query_version": "4.0.3",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/filelock/4.0.3/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "fonttools",
+      "version": "4.66.0",
+      "query_version": "4.66.0",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/fonttools/4.66.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.9.0",
+      "query_version": "2026.9.0",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/fsspec/2026.9.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "ftfy",
+      "version": "6.1.1",
+      "query_version": "6.1.1",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/ftfy/6.1.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "query_version": "0.16.0",
+      "local_variant": false,
+      "scopes": [
+        "core",
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/h11/0.16.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.6.0",
+      "query_version": "1.6.0",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/hf-xet/1.6.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "query_version": "1.0.9",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/httpcore/1.0.9/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "query_version": "0.28.1",
+      "local_variant": false,
+      "scopes": [
+        "test",
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/httpx/0.28.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "huggingface-hub",
+      "version": "0.35.0",
+      "query_version": "0.35.0",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/huggingface-hub/0.35.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "hydra-core",
+      "version": "1.3.4",
+      "query_version": "1.3.4",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/hydra-core/1.3.4/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "query_version": "3.20",
+      "local_variant": false,
+      "scopes": [
+        "core",
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/idna/3.20/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "imageio",
+      "version": "2.37.4",
+      "query_version": "2.37.4",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/imageio/2.37.4/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "iopath",
+      "version": "0.1.10",
+      "query_version": "0.1.10",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/iopath/0.1.10/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "jinja2",
+      "version": "3.1.6",
+      "query_version": "3.1.6",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/jinja2/3.1.6/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.5.1",
+      "query_version": "1.5.1",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/kiwisolver/1.5.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "lazy-loader",
+      "version": "0.6",
+      "query_version": "0.6",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/lazy-loader/0.6/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "llvmlite",
+      "version": "0.44.0",
+      "query_version": "0.44.0",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/llvmlite/0.44.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "markupsafe",
+      "version": "3.0.3",
+      "query_version": "3.0.3",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/markupsafe/3.0.3/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.10.6",
+      "query_version": "3.10.6",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/matplotlib/3.10.6/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "query_version": "1.3.0",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/mpmath/1.3.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "networkx",
+      "version": "3.7",
+      "query_version": "3.7",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/networkx/3.7/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "numba",
+      "version": "0.61.2",
+      "query_version": "0.61.2",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/numba/0.61.2/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "numpy",
+      "version": "1.26.4",
+      "query_version": "1.26.4",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/numpy/1.26.4/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.3",
+      "query_version": "2.5.3",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/numpy/2.5.3/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cublas-cu12",
+      "version": "12.8.3.14",
+      "query_version": "12.8.3.14",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cublas-cu12/12.8.3.14/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cublas-cu12",
+      "version": "12.8.4.1",
+      "query_version": "12.8.4.1",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cublas-cu12/12.8.4.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cuda-cupti-cu12",
+      "version": "12.8.57",
+      "query_version": "12.8.57",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cuda-cupti-cu12/12.8.57/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cuda-cupti-cu12",
+      "version": "12.8.90",
+      "query_version": "12.8.90",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cuda-cupti-cu12/12.8.90/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cuda-nvrtc-cu12",
+      "version": "12.8.61",
+      "query_version": "12.8.61",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cuda-nvrtc-cu12/12.8.61/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cuda-nvrtc-cu12",
+      "version": "12.8.93",
+      "query_version": "12.8.93",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cuda-nvrtc-cu12/12.8.93/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cuda-runtime-cu12",
+      "version": "12.8.57",
+      "query_version": "12.8.57",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cuda-runtime-cu12/12.8.57/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cuda-runtime-cu12",
+      "version": "12.8.90",
+      "query_version": "12.8.90",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cuda-runtime-cu12/12.8.90/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cudnn-cu12",
+      "version": "9.10.2.21",
+      "query_version": "9.10.2.21",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cudnn-cu12/9.10.2.21/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cudnn-cu12",
+      "version": "9.7.1.26",
+      "query_version": "9.7.1.26",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cudnn-cu12/9.7.1.26/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cufft-cu12",
+      "version": "11.3.3.41",
+      "query_version": "11.3.3.41",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cufft-cu12/11.3.3.41/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cufft-cu12",
+      "version": "11.3.3.83",
+      "query_version": "11.3.3.83",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cufft-cu12/11.3.3.83/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cufile-cu12",
+      "version": "1.13.0.11",
+      "query_version": "1.13.0.11",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cufile-cu12/1.13.0.11/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cufile-cu12",
+      "version": "1.13.1.3",
+      "query_version": "1.13.1.3",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cufile-cu12/1.13.1.3/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-curand-cu12",
+      "version": "10.3.9.55",
+      "query_version": "10.3.9.55",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-curand-cu12/10.3.9.55/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-curand-cu12",
+      "version": "10.3.9.90",
+      "query_version": "10.3.9.90",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-curand-cu12/10.3.9.90/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cusolver-cu12",
+      "version": "11.7.2.55",
+      "query_version": "11.7.2.55",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cusolver-cu12/11.7.2.55/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cusolver-cu12",
+      "version": "11.7.3.90",
+      "query_version": "11.7.3.90",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cusolver-cu12/11.7.3.90/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cusparse-cu12",
+      "version": "12.5.7.53",
+      "query_version": "12.5.7.53",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cusparse-cu12/12.5.7.53/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cusparse-cu12",
+      "version": "12.5.8.93",
+      "query_version": "12.5.8.93",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cusparse-cu12/12.5.8.93/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cusparselt-cu12",
+      "version": "0.6.3",
+      "query_version": "0.6.3",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cusparselt-cu12/0.6.3/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-cusparselt-cu12",
+      "version": "0.7.1",
+      "query_version": "0.7.1",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-cusparselt-cu12/0.7.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-ml-py",
+      "version": "13.610.43",
+      "query_version": "13.610.43",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-ml-py/13.610.43/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-nccl-cu12",
+      "version": "2.26.2",
+      "query_version": "2.26.2",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-nccl-cu12/2.26.2/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-nccl-cu12",
+      "version": "2.27.5",
+      "query_version": "2.27.5",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-nccl-cu12/2.27.5/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-nvjitlink-cu12",
+      "version": "12.8.61",
+      "query_version": "12.8.61",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-nvjitlink-cu12/12.8.61/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-nvjitlink-cu12",
+      "version": "12.8.93",
+      "query_version": "12.8.93",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-nvjitlink-cu12/12.8.93/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-nvshmem-cu12",
+      "version": "3.4.5",
+      "query_version": "3.4.5",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-nvshmem-cu12/3.4.5/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-nvtx-cu12",
+      "version": "12.8.55",
+      "query_version": "12.8.55",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-nvtx-cu12/12.8.55/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "nvidia-nvtx-cu12",
+      "version": "12.8.90",
+      "query_version": "12.8.90",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/nvidia-nvtx-cu12/12.8.90/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "omegaconf",
+      "version": "2.3.1",
+      "query_version": "2.3.1",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/omegaconf/2.3.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "opencv-python",
+      "version": "4.11.0.86",
+      "query_version": "4.11.0.86",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/opencv-python/4.11.0.86/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "query_version": "26.3",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/packaging/26.3/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "pandas",
+      "version": "2.3.2",
+      "query_version": "2.3.2",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/pandas/2.3.2/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "query_version": "12.3.0",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/pillow/12.3.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "pip",
+      "version": "26.2.1",
+      "query_version": "26.2.1",
+      "local_variant": false,
+      "scopes": [
+        "build"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/pip/26.2.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.11.12",
+      "query_version": "4.11.12",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/platformdirs/4.11.12/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "playwright",
+      "version": "1.63.0",
+      "query_version": "1.63.0",
+      "local_variant": false,
+      "scopes": [
+        "test"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/playwright/1.63.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "polars",
+      "version": "1.44.2",
+      "query_version": "1.44.2",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/polars/1.44.2/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "polars-runtime-32",
+      "version": "1.44.2",
+      "query_version": "1.44.2",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/polars-runtime-32/1.44.2/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "portalocker",
+      "version": "4.4.0",
+      "query_version": "4.4.0",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/portalocker/4.4.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "psutil",
+      "version": "7.1.0",
+      "query_version": "7.1.0",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/psutil/7.1.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2",
+      "query_version": "7.2.2",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/psutil/7.2.2/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "pycocotools",
+      "version": "2.0.10",
+      "query_version": "2.0.10",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-adapters.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/pycocotools/2.0.10/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "pycocotools",
+      "version": "2.0.11",
+      "query_version": "2.0.11",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/pycocotools/2.0.11/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.5",
+      "query_version": "2.13.5",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/pydantic/2.13.5/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "pydantic-core",
+      "version": "2.46.5",
+      "query_version": "2.46.5",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/pydantic-core/2.46.5/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "query_version": "3.3.3",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/pyparsing/3.3.3/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "pytest",
+      "version": "9.1.1",
+      "query_version": "9.1.1",
+      "local_variant": false,
+      "scopes": [
+        "test"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/pytest/9.1.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "query_version": "2.9.0.post0",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/python-dateutil/2.9.0.post0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.32",
+      "query_version": "0.0.32",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/python-multipart/0.0.32/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "pytz",
+      "version": "2026.4",
+      "query_version": "2026.4",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/pytz/2026.4/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0.2",
+      "query_version": "6.0.2",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/pyyaml/6.0.2/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "regex",
+      "version": "2025.9.18",
+      "query_version": "2025.9.18",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/regex/2025.9.18/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "query_version": "2.34.2",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/requests/2.34.2/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "ruff",
+      "version": "0.16.9",
+      "query_version": "0.16.9",
+      "local_variant": false,
+      "scopes": [
+        "dev"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/ruff/0.16.9/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "safetensors",
+      "version": "0.8.0",
+      "query_version": "0.8.0",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/safetensors/0.8.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "scikit-image",
+      "version": "0.25.2",
+      "query_version": "0.25.2",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/scikit-image/0.25.2/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "scipy",
+      "version": "1.15.3",
+      "query_version": "1.15.3",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/scipy/1.15.3/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "setuptools",
+      "version": "84.0.0",
+      "query_version": "84.0.0",
+      "local_variant": false,
+      "scopes": [
+        "build",
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/setuptools/84.0.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "shapely",
+      "version": "2.1.2",
+      "query_version": "2.1.2",
+      "local_variant": false,
+      "scopes": [
+        "core",
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-adapters.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/shapely/2.1.2/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "query_version": "1.17.0",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/six/1.17.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "starlette",
+      "version": "1.7.0",
+      "query_version": "1.7.0",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/starlette/1.7.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "query_version": "1.14.0",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/sympy/1.14.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "tifffile",
+      "version": "2026.3.3",
+      "query_version": "2026.3.3",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/tifffile/2026.3.3/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "timm",
+      "version": "1.0.20",
+      "query_version": "1.0.20",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/timm/1.0.20/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "torch",
+      "version": "2.10.0+cu128",
+      "query_version": "2.10.0",
+      "local_variant": true,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/torch/2.10.0/json",
+      "advisory_ids": [
+        "GHSA-rrmf-rvhw-rf47",
+        "PYSEC-2026-139"
+      ]
+    },
+    {
+      "name": "torch",
+      "version": "2.7.1+cpu",
+      "query_version": "2.7.1",
+      "local_variant": true,
+      "scopes": [
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/torch/2.7.1/json",
+      "advisory_ids": [
+        "GHSA-887c-mr87-cxwp",
+        "GHSA-qfhq-4f3w-5fph",
+        "GHSA-rrmf-rvhw-rf47",
+        "GHSA-vgrw-7cvw-pwgx",
+        "PYSEC-2025-203",
+        "PYSEC-2025-204",
+        "PYSEC-2025-206",
+        "PYSEC-2026-139",
+        "PYSEC-2026-1970",
+        "PYSEC-2026-2286"
+      ]
+    },
+    {
+      "name": "torch",
+      "version": "2.7.1+cu128",
+      "query_version": "2.7.1",
+      "local_variant": true,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/torch/2.7.1/json",
+      "advisory_ids": [
+        "GHSA-887c-mr87-cxwp",
+        "GHSA-qfhq-4f3w-5fph",
+        "GHSA-rrmf-rvhw-rf47",
+        "GHSA-vgrw-7cvw-pwgx",
+        "PYSEC-2025-203",
+        "PYSEC-2025-204",
+        "PYSEC-2025-206",
+        "PYSEC-2026-139",
+        "PYSEC-2026-1970",
+        "PYSEC-2026-2286"
+      ]
+    },
+    {
+      "name": "torchvision",
+      "version": "0.22.1+cpu",
+      "query_version": "0.22.1",
+      "local_variant": true,
+      "scopes": [
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/torchvision/0.22.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "torchvision",
+      "version": "0.22.1+cu128",
+      "query_version": "0.22.1",
+      "local_variant": true,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/torchvision/0.22.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "torchvision",
+      "version": "0.25.0+cu128",
+      "query_version": "0.25.0",
+      "local_variant": true,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/torchvision/0.25.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "tqdm",
+      "version": "4.67.1",
+      "query_version": "4.67.1",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/tqdm/4.67.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "triton",
+      "version": "3.3.1",
+      "query_version": "3.3.1",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/triton/3.3.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "triton",
+      "version": "3.6.0",
+      "query_version": "3.6.0",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/triton/3.6.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "query_version": "4.16.0",
+      "local_variant": false,
+      "scopes": [
+        "core",
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/typing-extensions/4.16.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "query_version": "0.4.4",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/typing-inspection/0.4.4/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.4",
+      "query_version": "2026.4",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/tzdata/2026.4/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "ultralytics",
+      "version": "8.4.162",
+      "query_version": "8.4.162",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/ultralytics/8.4.162/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "ultralytics-platform",
+      "version": "0.1.62",
+      "query_version": "0.1.62",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/ultralytics-platform/0.1.62/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "ultralytics-thop",
+      "version": "2.1.6",
+      "query_version": "2.1.6",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/ultralytics-thop/2.1.6/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0",
+      "query_version": "2.8.0",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/urllib3/2.8.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.53.0",
+      "query_version": "0.53.0",
+      "local_variant": false,
+      "scopes": [
+        "core"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/uvicorn/0.53.0/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.9.1",
+      "query_version": "0.9.1",
+      "local_variant": false,
+      "scopes": [
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/wcwidth/0.9.1/json",
+      "advisory_ids": []
+    },
+    {
+      "name": "wheel",
+      "version": "0.48.0",
+      "query_version": "0.48.0",
+      "local_variant": false,
+      "scopes": [
+        "build",
+        "locks/provider-yolo-cu128.txt",
+        "locks/provider-sam2-cpu.txt",
+        "locks/provider-sam2-cu128.txt",
+        "locks/provider-yolo-cpu.txt",
+        "locks/provider-sam3-cu128.txt"
+      ],
+      "status": "QUERIED",
+      "source": "https://pypi.org/pypi/wheel/0.48.0/json",
+      "advisory_ids": []
+    }
+  ],
+  "residual_review": "DEPENDENCY_SECURITY.md"
+}

@@ -1,0 +1,13 @@
+ultralytics==8.4.162
+numpy==1.26.4
+pillow==12.3.0
+PyYAML==6.0.2
+setuptools==84.0.0
+wheel==0.48.0
+opencv-python==4.11.0.86
+matplotlib==3.10.6
+scipy==1.15.3
+
+shapely==2.1.2
+
+pycocotools==2.0.10

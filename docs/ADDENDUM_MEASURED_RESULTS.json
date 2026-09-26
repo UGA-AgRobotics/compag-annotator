@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0rc1",
+  "status": "IMPLEMENTED_AND_AUTOMATED_CHECKS_PASSED_AWAITING_HUMAN_UAT",
+  "base_checkpoint": "5d98629",
+  "addendum_sha256": "c233d642a1cae0af24ab2ca868c75a9fb7ae1abe773a909218bf3a69838fd2ad",
+  "human_uat": "AWAITING_HUMAN_UAT",
+  "accuracy_or_speed_improvement_claim": false,
+  "real_sam2_automatic_cases": [
+    {
+      "config": {
+        "height": 512,
+        "mode": "tiled",
+        "overlap": {
+          "mode": "percent",
+          "x": 25,
+          "y": 25
+        },
+        "overlap_x": 128,
+        "overlap_y": 128,
+        "preset": "512",
+        "stride_x": 384,
+        "stride_y": 384,
+        "width": 512
+      },
+      "image_width": 3024,
+      "image_height": 4032,
+      "tiles": 88,
+      "canonical_proposals": 420,
+      "candidates_before_exact_dedup": 420,
+      "cold_model_load_count": 1,
+      "provider_timings_seconds": {
+        "generation_seconds": 14.72359252897877,
+        "geometry_seconds": 0.5844765540314256,
+        "image_preparation_seconds": 26.434942406980554,
+        "load_seconds": 3.0130766019938164,
+        "recovery_seconds": 0.0,
+        "worker_total_seconds": 54.75741320996167
+      },
+      "total_job_wall_seconds": 107.44994793200021,
+      "grouping_mapping_storage_seconds": null,
+      "unattributed_host_overhead_seconds": 52.692534722038545,
+      "timing_note": "Host residual includes IPC, hashing, canonical mapping, durable writes and polling; it is not an isolated grouping measurement.",
+      "model_sha256": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38",
+      "implementation_sha256": "95beb93f33717b36a3d4a60b2e8ca51548484705821b89caa92ffafacea3f064",
+      "recipe_sha256": "463e131e73cf526f62d350177feaadbe94232774e8e5011a4eb2e8126ac1868e",
+      "plan_hash": "d42df7f634a2f6c9599dc69b07f630e9d2cfc279882a899ac810d28b3f0c85eb",
+      "heavy_recovery_calls": 0,
+      "passed": true
+    },
+    {
+      "config": {
+        "height": 384,
+        "mode": "tiled",
+        "overlap": {
+          "mode": "percent",
+          "x": 25,
+          "y": 25
+        },
+        "overlap_x": 160,
+        "overlap_y": 96,
+        "preset": "custom",
+        "stride_x": 480,
+        "stride_y": 288,
+        "width": 640
+      },
+      "image_width": 3024,
+      "image_height": 4032,
+      "tiles": 84,
+      "canonical_proposals": 421,
+      "candidates_before_exact_dedup": 421,
+      "cold_model_load_count": 1,
+      "provider_timings_seconds": {
+        "generation_seconds": 15.185914300032891,
+        "geometry_seconds": 0.526337977971707,
+        "image_preparation_seconds": 25.971587109983375,
+        "load_seconds": 2.8884193440098898,
+        "recovery_seconds": 0.0,
+        "worker_total_seconds": 54.1280533159661
+      },
+      "total_job_wall_seconds": 110.61063065499911,
+      "grouping_mapping_storage_seconds": null,
+      "unattributed_host_overhead_seconds": 56.482577339033014,
+      "timing_note": "Host residual includes IPC, hashing, canonical mapping, durable writes and polling; it is not an isolated grouping measurement.",
+      "model_sha256": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38",
+      "implementation_sha256": "95beb93f33717b36a3d4a60b2e8ca51548484705821b89caa92ffafacea3f064",
+      "recipe_sha256": "4508501d55cd7bcd03a45cfab9b0e511cae01919845e6d39355f69a69fa2ccfe",
+      "plan_hash": "edb21a205dc6e6338ea7b051811462d079f381e8fcad9b7821d4bad6780fc8ef",
+      "heavy_recovery_calls": 0,
+      "passed": true
+    }
+  ],
+  "additional_training_jobs": 0,
+  "budget": {
+    "base_gpu_minutes_upper_bound_before_addendum": 5,
+    "base_gpu_minutes_remaining_at_checkpoint_at_least": 55,
+    "addendum_cap_minutes": 20,
+    "generation_wall_seconds_used": 334.8597723480052,
+    "recovery_wall_seconds_used": 5.059270910998748,
+    "conservative_addendum_gpu_minutes_used": 5.665317387650066,
+    "remaining_addendum_gpu_minutes_at_least": 14.334682612349933,
+    "remaining_base_gpu_minutes_at_least": 49.33468261234994
+  },
+  "sam3_automatic": "UNSUPPORTED_BY_VALIDATED_ADAPTER; local point/box prompting separately passed",
+  "real_presets_not_run": [
+    "256",
+    "1024"
+  ],
+  "other_presets_geometry_integration": "PASS_AUTOMATED",
+  "private_evidence_in_public_tree": false,
+  "boundary_on": {
+    "scope": "one actual automatically generated internal-seam candidate",
+    "passed": true,
+    "wall_seconds": 5.059270910998748,
+    "job_result": {
+      "applicable": true,
+      "context": "automatic_mask_annotation",
+      "deferred_instances": 0,
+      "invoked": true,
+      "job_id": "036a3e629fa5484d91b6120c52d19baa",
+      "limit": 1,
+      "model_calls": 1,
+      "proposals": 1,
+      "recovery_wall_seconds": 4.607100141001865,
+      "relevant_instances": 1,
+      "scoped_instances": 1
+    },
+    "heavy_model_calls": 1,
+    "original_preserved": true,
+    "pending_review_gate": true,
+    "automated_retain_preserved": true,
+    "replacement_available": false,
+    "interpretation": "Mechanism and review gate tested; usefulness/accuracy requires human review."
+  },
+  "actual_generated_masks_installed_ui": {
+    "passed": true,
+    "review_actor": "automated_qa",
+    "human_verified": false,
+    "initial_proposals": 841,
+    "accepted": 3,
+    "rejected": 837,
+    "superseded": 2,
+    "exact_cross_tile_union": true,
+    "brush_correction_preserved": true,
+    "delete_undo_reload_exact": true,
+    "coco_native_exact_pixels": true,
+    "original_image_unchanged": true,
+    "history_entries_in_native_backup": 181,
+    "additional_model_calls": 0,
+    "additional_training_jobs": 0
+  },
+  "changed_dataset_path": {
+    "passed": true,
+    "source_inputs_unchanged": true,
+    "accepted_generated_instances": 3,
+    "accepted_child_occurrences": 1,
+    "superseded_parents_in_snapshot": 0,
+    "canonical_geometry_preserved": true,
+    "class_mapping_rebuilt": true,
+    "train_count": 4,
+    "fixed_validation_count": 2,
+    "generated_image_role": "fixed validation, unchanged",
+    "snapshot_status": "UNTRAINED",
+    "snapshot_sha256": "4ded486fa3755c8bef399d647b60dd195bdbc0c0faa32f4c7e7633906559b163",
+    "new_training_jobs": 0,
+    "ultralytics_cpu_loader": "PASS; 6 images/18 labels; no model loaded or CUDA initialized",
+    "actual_generated_masks_in_training_split": false,
+    "training_row_coverage": "Separate synthetic integration test passes for an accepted merged training-label row.",
+    "explicit_lossy_conversion_only_for_this_qa_test": true,
+    "yolo_conversion": [
+      {
+        "method": "all_components_convex_hull",
+        "original_area": 169973,
+        "converted_area": 210210,
+        "changed_pixels": 40237,
+        "components": 3,
+        "holes": 22,
+        "iou": 0.8085866514437943,
+        "lossy": true
+      },
+      {
+        "method": "pixel_edge_polygon",
+        "original_area": 2111,
+        "converted_area": 2111,
+        "changed_pixels": 0,
+        "components": 1,
+        "holes": 0,
+        "iou": 1.0,
+        "lossy": false
+      },
+      {
+        "method": "all_components_convex_hull",
+        "original_area": 203860,
+        "converted_area": 225321,
+        "changed_pixels": 21461,
+        "components": 2,
+        "holes": 22,
+        "iou": 0.9047536625525362,
+        "lossy": true
+      }
+    ],
+    "interpretation": "Native and COCO preserve exact masks. Strict YOLO blocks unsupported topology; this explicit lossy test does not alter canonical masks or train them."
+  },
+  "corrected_candidate_real_sam2_512": {
+    "config": {
+      "height": 512,
+      "mode": "tiled",
+      "overlap": {
+        "mode": "percent",
+        "x": 25,
+        "y": 25
+      },
+      "overlap_x": 128,
+      "overlap_y": 128,
+      "preset": "512",
+      "stride_x": 384,
+      "stride_y": 384,
+      "width": 512
+    },
+    "tiles": 88,
+    "canonical_proposals": 420,
+    "model_sha256": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38",
+    "implementation_sha256": "419575ccac8653010f77aef45a448d92bf933fa842caf23054de8f00edfc279d",
+    "recipe_sha256": "00071ed9a36f8881bf5b080ee162c20364e259d7b52bfb059c365a4e95578cb0",
+    "plan_hash": "d42df7f634a2f6c9599dc69b07f630e9d2cfc279882a899ac810d28b3f0c85eb",
+    "provider_timings_seconds": {
+      "generation_seconds": 14.444385884999065,
+      "geometry_seconds": 0.5982828290070756,
+      "image_preparation_seconds": 25.19078035998973,
+      "load_seconds": 6.159432397980709,
+      "recovery_seconds": 0.0,
+      "worker_total_seconds": 56.5009743870105
+    },
+    "grouping_mapping_storage_seconds": 6.297120135008299,
+    "total_job_wall_seconds": 116.79919376100588,
+    "heavy_recovery_calls": 0,
+    "passed": true
+  },
+  "training_evidence_reuse": {
+    "six_training_resume_functions_unchanged_ast": true,
+    "base_checkpoint": "5d98629",
+    "original_snapshots_immutable": true,
+    "new_generated_masks_trained": false,
+    "third_training_job_started": false
+  },
+  "automated_software": {
+    "non_browser": {
+      "passed": 499,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 14.07
+    },
+    "browser_source_before_restored_job_guard": {
+      "passed": 15,
+      "failed": 0,
+      "seconds": 57.63
+    },
+    "browser_installed_initial": {
+      "passed": 17,
+      "failed": 1,
+      "seconds": 56.83,
+      "issue": "Resume test awaited previous failed job before the guarded asynchronous retry request completed; investigation/retry pending"
+    },
+    "non_browser_final": {
+      "passed": 516,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 23.281,
+      "real_ultralytics_cpu_loaders": 2
+    },
+    "browser_installed_fixed": {
+      "passed": 20,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 63.0,
+      "server_outside_source": true,
+      "caller_pythonpath_removed": true
+    }
+  },
+  "failed_attempts_preserved": [
+    "Initial installed Resume test observed the previous failed job before the guarded async retry response. The test now waits for the actual response; both Resume regressions pass.",
+    "Actual 841-proposal canvas selection waited behind background geometry loading. No project mutations occurred in that attempt. Interactive priority loading fixed it; actual click, multiselect, merge and editing subsequently passed.",
+    "Initial actual reviewed COCO export contained no annotations because whole-image completeness had not been explicitly confirmed. The QA continuation explicitly rejected the remaining proposals and completed the image; exact COCO/native exports then passed. Final application rejects an empty reviewed-image scope with a clear message.",
+    "A complete unit run initially omitted the optional CPU-loader environment variable and skipped two checks. The corrected full run executed both without downloads or GPU use."
+  ],
+  "final_artifact_identity": "See separately supplied dist/FINAL_VERIFICATION.json and SHA256SUMS; no artifact self-hash is embedded here."
+}

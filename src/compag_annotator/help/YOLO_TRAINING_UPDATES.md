@@ -1,0 +1,19 @@
+# Short YOLO training runs
+
+All supported YOLO segmentation models use the same training adapter, including YOLO26n/s, YOLO11n/s and compatible locally registered segmenters. For each new training job, the effective batch is the smaller of the requested batch and the number of training images. The nominal accumulation batch (`nbs`) is capped at the smaller of 64 and the training-image count. Datasets with at least 64 images retain the nominal 64-image default. Epochs, image size, optimizer choice, learning rate, data membership and validation rules are not silently changed.
+
+This avoids waiting for an accumulation window larger than the available tiny dataset. With one training image, requested batch 4 and 10 epochs, the earlier default could finish after only a zero-learning-rate warmup optimizer step. The pinned trainer already limits warmup to leave at least the final epoch for regular training; the adapter's dataset-sized accumulation allows subsequent positive-rate steps to happen.
+
+The adapter observes actual optimizer pre/post hooks. It records total optimizer steps, steps with a positive learning rate and full SHA-256 digests of learnable parameters before and after training. Parameter values must be finite. Hashing happens only at the start/end. Active trainable parameters are compared numerically immediately before/after a positive-rate optimizer call until one real change is witnessed; subsequent calls need only counters. This prevents initialization, finalization or signed-zero differences from being mistaken for learning. Training must include a verified numerical optimizer update and a changed final parameter digest before the result can be registered. An ineffective run fails with an actionable message and retains `training/optimization.json` for inspection. It is never automatically activated.
+
+The result and registered model include the effective settings and optimization receipt. Jobs displays a weight-update check for new results that passed it. Older jobs keep their original evidence and are not retroactively declared to have passed. A fresh independent process still loads the selected saved checkpoint and verifies its class map.
+
+Resume retains its existing dataset, optimizer state and saved schedule. The same update check applies to the resumed segment of work. To replace an old unsuitable tiny-data schedule, start a new training job from the original base model instead of resuming the old job. No original weights, snapshots or annotations are changed by this update.
+
+Verified weight updates demonstrate optimization, not prediction quality. Zero validation metrics or an empty inference probe still require more investigation. Add reviewed examples of each object class you expect to detect, across varied images, and preserve separate validation images. Extra epochs cannot replace examples of an absent class. If a named "non-object" class means only background rather than a distinct object category, it does not need an all-background instance mask.
+
+The execution minimum of one reviewed training image and one separate reviewed validation image is unchanged; it is not a model-quality minimum.
+
+Run `scripts/check_yolo_training_updates.py --help` for the bounded real-checkpoint regression. It uses its own synthetic dataset, exercises all four catalog models, reproduces the 10-epoch tiny-data case, and verifies that a deliberate zero-learning-rate job cannot register a new model. It neither downloads weights nor changes live projects. Optional checkpoint paths and an existing provider runtime must be supplied explicitly.
+
+The underlying parameters are documented in the [official Ultralytics training guide](https://docs.ultralytics.com/modes/train/) and [configuration reference](https://docs.ultralytics.com/usage/cfg/). The runtime remains pinned; no provider upgrade is required.
